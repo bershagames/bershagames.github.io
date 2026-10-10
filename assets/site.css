@@ -408,3 +408,13 @@ button,a{-webkit-tap-highlight-color:transparent}
 .site-page .project-info dt{font-size:12px;color:#aebfdb;margin-bottom:5px}
 .site-page .project-info dd{margin:0;color:#f5f1ff;font-weight:650;overflow-wrap:anywhere}
 @media(max-width:600px){.site-page .journal-tools{align-items:stretch;flex-direction:column}.site-page .journal-tools input,.site-page .journal-tools select{width:100%;flex:auto}.site-page .project-info dl{grid-template-columns:1fr}}
+
+/* Package 07: accessibility, responsive controls, predictable anchors */
+.site-page :focus-visible{outline:3px solid #d4b5ff;outline-offset:3px}
+.site-page a,.site-page button,.site-page select,.site-page input{touch-action:manipulation}
+.site-page [id]{scroll-margin-top:88px}
+.site-page .journal-controls input:focus-visible,.site-page .journal-controls select:focus-visible,.site-page .journal-tools input:focus-visible,.site-page .journal-tools select:focus-visible{border-color:#c59aff}
+.site-page footer a{display:inline-block;padding:5px 2px}
+.site-page .journal-cta,.site-page .community-next,.site-page .project-info{overflow-wrap:anywhere}
+@media(max-width:600px){.site-page .community-shortcuts{display:flex;flex-wrap:wrap;gap:9px}.site-page .community-shortcuts a{min-height:44px;display:inline-flex;align-items:center}.site-page .project-info dd a{display:inline-block;min-height:34px;padding-top:5px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
