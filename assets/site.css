@@ -382,3 +382,16 @@ button,a{-webkit-tap-highlight-color:transparent}
 .site-page .updates-grid>a span{color:#cbb4f5;font-size:13px}
 .site-page .updates-grid>a:hover{border-color:#ac7cf1;background:#1a2542}
 @media(max-width:600px){.site-page .journal-cta{flex-direction:column;align-items:stretch;padding:16px}.site-page .journal-cta>a{align-self:flex-start}.site-page .updates-grid{grid-template-columns:1fr}}
+
+/* Batch 05: verified journal filters and announcement cards */
+.site-page .journal-controls{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:24px 0 14px}
+.site-page .journal-controls label{font-weight:700;color:#dfe6f8}
+.site-page .journal-controls select{background:#17233c;color:#fff;border:1px solid #65558e;border-radius:10px;padding:12px;min-height:44px;max-width:100%;font:inherit}
+.site-page .journal-feed{padding:16px 18px;margin-bottom:28px;border:1px solid #36456a;border-radius:15px;background:#111d33;color:#c5d1e7}
+.site-page .journal-feed>p{margin:0;line-height:1.6}
+.site-page .journal-entry{padding:15px 0;border-bottom:1px solid #354362}
+.site-page .journal-entry:last-child{border-bottom:0}
+.site-page .journal-entry h3{margin:8px 0;color:#f6f3ff}
+.site-page .journal-entry time{font-size:12px;color:#cbb5ff}
+.site-page .journal-entry p{line-height:1.6}
+@media(max-width:480px){.site-page .journal-controls{align-items:stretch;flex-direction:column}.site-page .journal-controls select{width:100%}}
