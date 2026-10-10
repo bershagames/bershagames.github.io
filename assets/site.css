@@ -104,3 +104,20 @@ body:has(main.site-page){background:#050b18;color:#f6f7ff;font:15px/1.65 system-
  .site-page .site-nav{justify-content:space-between}
 }
 @media(max-width:390px){.brand{font-size:18px}.brand .pad{width:35px;height:35px}.lang-button{padding:7px 8px}.menu-toggle{width:39px}.game-grid{grid-template-columns:1fr}.game-info{min-height:0}.game-info p{margin-bottom:16px}}
+
+
+/* Community hub and game detail system */
+.site-page .social-grid,.site-page .detail-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin:24px 0}
+.site-page .social-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.site-page .social-card,.site-page .detail-feature{margin:0;min-width:0}
+.site-page .social-card h2,.site-page .detail-feature h2{font-size:20px}
+.site-page .social-card p,.site-page .detail-feature p{font-size:14px;line-height:1.65}
+.site-page .social-card .tag{margin-top:4px;background:#231b37}
+.site-page .feature-number{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:12px;background:#342157;color:#e4c7ff;font-weight:800;margin-bottom:15px}
+.site-page .detail-cta{background:linear-gradient(125deg,#25173f,#0b1b31)}
+.site-page .detail-link{display:inline-flex;padding:10px 16px;border:1px solid #785aa6;border-radius:12px;margin:7px 10px 0 0;text-decoration:none}
+.site-page .site-header{flex-wrap:wrap}
+.site-page .site-nav{flex:1 1 100%;justify-content:flex-start;gap:7px}
+.site-page .site-nav a{background:#0e1a30;border:1px solid #263756}
+.site-page .site-nav a[aria-current=page]{border-color:#9b6fe1}
+@media(max-width:700px){.site-page .detail-grid{grid-template-columns:1fr}.site-page .social-grid{grid-template-columns:1fr}.site-page .page-banner{aspect-ratio:16/10}.site-page .site-nav{flex-wrap:nowrap;overflow-x:auto;padding-bottom:6px;scrollbar-width:thin}.site-page .site-nav a{white-space:nowrap;flex:none}}
