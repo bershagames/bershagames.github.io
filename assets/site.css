@@ -337,3 +337,15 @@ button,a{-webkit-tap-highlight-color:transparent}
 .site-page .community-shortcuts a:hover{border-color:#fa923e;background:#1b2339}
 .site-page .channel-section-title{scroll-margin-top:24px}
 @media(max-width:390px){.site-page .community-shortcuts a{font-size:13px;padding:9px 11px}}
+
+/* P0/P1 batch v20: about discovery, legal accordions, small-screen readability */
+.site-page .about-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:25px}
+.site-page .about-links>a{display:flex;flex-direction:column;gap:7px;padding:17px;border:1px solid #334466;border-radius:15px;background:#101c33;text-decoration:none;color:#f7f7ff;min-width:0}
+.site-page .about-links>a>span{font-size:25px}.site-page .about-links strong{font-size:16px}.site-page .about-links small{font-size:12px;color:#b9c4da;line-height:1.5}
+.site-page .about-links>a:hover{border-color:#9868f3;background:#192442}
+.site-page details{border-bottom:1px solid #334461;padding:12px 0}
+.site-page details summary{cursor:pointer;min-height:44px;display:list-item;align-content:center;font-weight:650}
+.site-page details[open] summary{color:#dbc0ff}
+.site-page details p{line-height:1.7;overflow-wrap:anywhere}
+.site-page .unified-nav a,.site-page .channel-link{touch-action:manipulation}
+@media(max-width:650px){.site-page .about-links{grid-template-columns:1fr;gap:10px}.site-page .about-links>a{padding:14px}.site-page .panel h1{overflow-wrap:break-word}}
