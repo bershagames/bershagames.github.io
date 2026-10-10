@@ -172,3 +172,7 @@ body:has(main.site-page){background:#050b18;color:#f6f7ff;font:15px/1.65 system-
 .creator-channels .social-card{transition:transform .18s ease,box-shadow .18s ease}
 @media(hover:hover){.creator-channels .social-card:hover{transform:translateY(-3px);box-shadow:0 15px 30px #0005}}
 @media(prefers-reduced-motion:reduce){.creator-channels .social-card{transition:none}}
+
+/* Mobile layout override: some Android browsers use a wider CSS viewport. */
+@media(max-width:950px){body .site-page .social-grid.creator-channels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}body .site-page .creator-channels .social-card{min-width:0;min-height:180px;padding:18px}body .site-page .creator-channels .social-card h2{font-size:16px;overflow-wrap:anywhere}body .site-page .creator-channels .social-card a{font-size:13px}}
+@media(max-width:430px){body .site-page .social-grid.creator-channels{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}body .site-page .creator-channels .social-card{padding:13px;min-height:180px}body .site-page .creator-channels .social-card h2{gap:6px;font-size:14px}body .site-page .creator-channels .platform-icon{width:27px;height:27px;font-size:16px}body .site-page .creator-channels .social-card a{font-size:11px;padding:9px 8px}}
