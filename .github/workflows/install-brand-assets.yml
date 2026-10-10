@@ -1,0 +1,42 @@
+name: Install approved brand images
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'bershagames-brand-assets.zip'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify and install the four approved assets
+        run: |
+          python3 - <<'PY'
+          from zipfile import ZipFile
+          from pathlib import Path
+          p=Path('bershagames-brand-assets.zip')
+          if not p.is_file(): raise SystemExit('Upload bershagames-brand-assets.zip to repository root first')
+          names=['bershagames-symbol.webp','bershagames-wordmark.webp','projectbersha-avatar.webp','projectbersha-cover.webp']
+          dest=Path('assets/brand')
+          dest.mkdir(parents=True,exist_ok=True)
+          with ZipFile(p) as z:
+              for name in names:
+                  matches=[i for i in z.infolist() if i.filename.endswith('/'+name) and not i.is_dir()]
+                  if len(matches)!=1: raise SystemExit(f'Missing or duplicate image: {name}')
+                  if matches[0].file_size>2_000_000: raise SystemExit(f'Image too large: {name}')
+                  data=z.read(matches[0])
+                  if not data.startswith(b'RIFF') or data[8:12]!=b'WEBP': raise SystemExit(f'Not a WebP: {name}')
+                  (dest/name).write_bytes(data)
+          PY
+      - name: Commit verified assets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/brand/*.webp
+          if ! git diff --cached --quiet; then
+            git commit -m "Install approved BershaGames and ProjectBersha images"
+            git push
+          fi
