@@ -228,3 +228,12 @@ body:has(main.site-page){background:#050b18;color:#f6f7ff;font:15px/1.65 system-
  .site-page .social-grid.creator-channels .social-card a{min-height:40px}
 }
 @media(max-width:390px){.topbar .brand-wordmark{width:137px}}
+
+/* BershaGames dark-mode brand identity v13 */
+.topbar .brand .brand-identity{display:inline-flex;align-items:center;gap:9px;max-width:100%;white-space:nowrap}
+.topbar .brand .brand-symbol{width:38px;height:38px;object-fit:contain;display:block;flex:none;mix-blend-mode:screen}
+.topbar .brand .brand-name{display:inline-flex;align-items:baseline;gap:5px;color:#f7f9ff;letter-spacing:-.035em;line-height:1}
+.topbar .brand .brand-name strong{font-size:20px;font-weight:850}
+.topbar .brand .brand-name>span{font-size:16px;font-weight:350;letter-spacing:.045em}
+@media(max-width:650px){.topbar .brand .brand-symbol{width:31px;height:31px}.topbar .brand .brand-name strong{font-size:17px}.topbar .brand .brand-name>span{font-size:13px}.topbar .brand .brand-identity{gap:6px}}
+@media(max-width:360px){.topbar .brand .brand-name strong{font-size:15px}.topbar .brand .brand-name>span{font-size:12px}}
