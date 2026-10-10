@@ -370,3 +370,15 @@ button,a{-webkit-tap-highlight-color:transparent}
 .site-page .community-next-links a{display:flex;align-items:center;justify-content:center;min-height:44px;padding:10px 14px;border:1px solid #61518c;border-radius:11px;background:#1b2443;text-decoration:none;color:#f3eaff;font-weight:650}
 .site-page .community-next-links a:hover{background:#312550;border-color:#aa78f2}
 @media(max-width:650px){.site-page .community-next{flex-direction:column;align-items:stretch;padding:17px}.site-page .community-next-links{flex-direction:row;flex-wrap:wrap}.site-page .community-next-links a{flex:1 1 155px}}
+
+/* Batch 04: development journal and contextual discovery */
+.site-page .journal-cta{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 20px;margin:26px 0 16px;border:1px solid #3e4571;border-radius:16px;background:linear-gradient(120deg,#161d39,#0d1b30)}
+.site-page .journal-cta strong{font-size:18px;color:#f6f2ff}
+.site-page .journal-cta p{margin:5px 0 0;color:#b8c6df;line-height:1.55;font-size:14px}
+.site-page .journal-cta>a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:11px 15px;border:1px solid #8d6cd7;border-radius:10px;background:#281c49;color:#f3eaff;text-decoration:none;white-space:nowrap;font-weight:700}
+.site-page .journal-cta>a:hover{background:#39265e}
+.site-page .updates-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:16px 0 25px}
+.site-page .updates-grid>a{display:flex;flex-direction:column;gap:10px;padding:20px;border:1px solid #354468;border-radius:15px;background:#111e35;color:#f7f5ff;text-decoration:none;min-width:0}
+.site-page .updates-grid>a span{color:#cbb4f5;font-size:13px}
+.site-page .updates-grid>a:hover{border-color:#ac7cf1;background:#1a2542}
+@media(max-width:600px){.site-page .journal-cta{flex-direction:column;align-items:stretch;padding:16px}.site-page .journal-cta>a{align-self:flex-start}.site-page .updates-grid{grid-template-columns:1fr}}
