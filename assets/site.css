@@ -127,3 +127,26 @@ body:has(main.site-page){background:#050b18;color:#f6f7ff;font:15px/1.65 system-
 
 /* One-page anchored game information */
 #game-details,.game-detail-grid .hub-card{scroll-margin-top:95px}.game-detail-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hub-status{display:inline-flex;border:1px solid #71559c;border-radius:20px;padding:5px 12px;color:#ddc7ff;font-size:12px}.game-detail-grid .hub-card:target{border-color:#ad77ff;box-shadow:0 0 0 2px #9c5cfa44}@media(max-width:570px){.game-detail-grid{grid-template-columns:1fr}}
+
+/* ProjectBersha streaming identity */
+.creator-hero{display:flex;align-items:center;gap:28px;margin:24px 0;padding:32px;border:1px solid #a94e18;border-radius:22px;background:radial-gradient(circle at 80% 10%,#81320c70,transparent 55%),linear-gradient(125deg,#22150f,#080c16 72%);box-shadow:0 18px 55px #0005;overflow:hidden}
+.creator-emblem{flex:0 0 122px;width:122px;height:122px;border-radius:50%;border:5px solid #ff831f;box-shadow:0 0 0 6px #ff831f19,0 0 34px #fa650b33;background:radial-gradient(circle at 40% 25%,#ff962a,#9a3609 52%,#151019 53%);display:flex;flex-direction:column;justify-content:center;align-items:center;color:#fff}
+.creator-emblem span{font-size:25px;line-height:1;color:#ffbd60}.creator-emblem strong{font-size:43px;line-height:1;font-weight:950;letter-spacing:-.09em;text-shadow:0 3px 10px #0008}
+.creator-eyebrow{color:#ffb16c;font-size:11px;letter-spacing:.19em;font-weight:800}
+.creator-hero h2{font-size:clamp(27px,5vw,55px);line-height:1.05;margin:12px 0;letter-spacing:-.045em;font-weight:950;color:#f6f7fb}
+.creator-hero h2 em{color:#ff8219;font-style:normal}
+.creator-hero p{font-size:12px;letter-spacing:.12em;font-weight:800;color:#f3d3b9;margin:0;line-height:1.8}
+.creator-hero p span{color:#ff861d}
+.site-page .creator-channels{grid-template-columns:repeat(3,minmax(0,1fr))}
+.site-page .creator-channels .social-card{display:flex;flex-direction:column;gap:7px;border-top:3px solid var(--platform,#ff8520);background:linear-gradient(150deg,color-mix(in srgb,var(--platform,#ff8520) 10%,#0d192e),#0d192e 60%);min-height:210px}
+.site-page .creator-channels .social-card h2{margin:0;color:#fff}
+.site-page .creator-channels .social-card p{margin:0 0 6px}
+.site-page .creator-channels .social-card p strong{color:#f3d6bb;font-size:13px}
+.site-page .creator-channels .social-card a{display:inline-flex;align-self:flex-start;margin-top:auto;padding:10px 13px;border:1px solid var(--platform,#ff8520);border-radius:10px;color:#fff;text-decoration:none;font-weight:750;font-size:13px}
+.site-page .creator-channels .social-card a:hover{background:var(--platform,#ff8520);color:#fff}
+.platform-youtube{--platform:#e93434}.platform-instagram{--platform:#d34fc1}.platform-tiktok{--platform:#31c5ce}.platform-kick{--platform:#4cce24}.platform-twitch{--platform:#9564e9}.platform-tip{--platform:#ff922d}
+.site-page .social-card:not(.creator-channels .social-card) a{display:inline-flex;padding:10px 13px;border:1px solid #7757ad;border-radius:10px;text-decoration:none;margin-top:8px}
+.site-page .site-nav a{min-height:36px;display:inline-flex;align-items:center}
+.site-page details{border-top:1px solid #31405d;padding:15px 0}.site-page details summary{cursor:pointer;font-weight:700;color:#e7d4ff}.site-page details[open] summary{margin-bottom:12px}
+@media(max-width:800px){.site-page .creator-channels{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.creator-hero{padding:22px 16px;gap:15px}.creator-emblem{width:82px;height:82px;flex-basis:82px;border-width:3px}.creator-emblem strong{font-size:29px}.creator-emblem span{font-size:17px}.creator-hero p{font-size:9px;letter-spacing:.04em}.site-page .creator-channels{grid-template-columns:1fr}.site-page .creator-channels .social-card{min-height:0}.creator-hero h2{font-size:27px}}
