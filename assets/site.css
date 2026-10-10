@@ -150,3 +150,12 @@ body:has(main.site-page){background:#050b18;color:#f6f7ff;font:15px/1.65 system-
 .site-page details{border-top:1px solid #31405d;padding:15px 0}.site-page details summary{cursor:pointer;font-weight:700;color:#e7d4ff}.site-page details[open] summary{margin-bottom:12px}
 @media(max-width:800px){.site-page .creator-channels{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:520px){.creator-hero{padding:22px 16px;gap:15px}.creator-emblem{width:82px;height:82px;flex-basis:82px;border-width:3px}.creator-emblem strong{font-size:29px}.creator-emblem span{font-size:17px}.creator-hero p{font-size:9px;letter-spacing:.04em}.site-page .creator-channels{grid-template-columns:1fr}.site-page .creator-channels .social-card{min-height:0}.creator-hero h2{font-size:27px}}
+
+/* Store listing status: deliberately not a clickable store link */
+.site-page .store-notice{display:flex;align-items:center;gap:14px;margin:18px 0 24px;padding:15px 17px;background:linear-gradient(120deg,#102238,#10182d);border:1px solid #365071;border-radius:15px;max-width:610px}
+.site-page .store-notice>span:first-child{display:grid;place-items:center;flex:none;width:42px;height:42px;border-radius:12px;background:#183b35;color:#77d6a7;font-size:20px}
+.site-page .store-notice>div{display:flex;flex-direction:column;gap:4px;min-width:0}
+.site-page .store-notice strong{font-size:15px;color:#f4f8ff}
+.site-page .store-notice small{font-size:12px;color:#b6c8d8;line-height:1.45}
+.site-page .store-soon{margin-left:auto;flex:none;background:#4d391a;color:#ffd58d;border:1px solid #7d5925;border-radius:20px;padding:6px 10px;font-size:12px;font-weight:800}
+@media(max-width:430px){.site-page .store-notice{gap:10px;padding:12px}.site-page .store-soon{font-size:11px;padding:5px 7px}}
