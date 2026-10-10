@@ -330,3 +330,10 @@ button,a{-webkit-tap-highlight-color:transparent}
 .site-page .sub-lang-menu button{display:block;width:100%;padding:12px 13px;border:0;border-radius:8px;background:transparent;color:#f5f6ff;text-align:left;font-size:14px;cursor:pointer;min-height:44px}
 .site-page .sub-lang-menu button:hover,.site-page .sub-lang-menu button:focus-visible{background:#293456}
 @media(max-width:420px){.site-page .sub-lang-menu{right:50px;min-width:156px}}
+
+/* ProjectBersha v19: lightweight channel shortcuts */
+.site-page .community-shortcuts{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 24px}
+.site-page .community-shortcuts a{display:inline-flex;align-items:center;min-height:44px;padding:10px 16px;border:1px solid #4a5b79;border-radius:12px;background:#121d34;color:#f4f4ff;text-decoration:none;font-weight:650}
+.site-page .community-shortcuts a:hover{border-color:#fa923e;background:#1b2339}
+.site-page .channel-section-title{scroll-margin-top:24px}
+@media(max-width:390px){.site-page .community-shortcuts a{font-size:13px;padding:9px 11px}}
