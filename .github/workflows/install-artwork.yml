@@ -1,0 +1,55 @@
+name: Install BershaGames artwork
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/install-artwork.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  install-artwork:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Extract verified site artwork
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from zipfile import ZipFile
+          source = Path('assets/covers/bershagames-gorseller.zip')
+          expected = {
+              'assets/hero.webp',
+              'assets/covers/block-merge-rush.webp',
+              'assets/covers/esnaf.webp',
+              'assets/covers/yanki-bahcesi.webp',
+              'assets/covers/transit-empire-world.webp',
+          }
+          if not source.is_file():
+              raise SystemExit('Artwork ZIP not found')
+          with ZipFile(source) as archive:
+              found = set(archive.namelist())
+              if found != expected:
+                  raise SystemExit(f'Unexpected archive contents: {found ^ expected}')
+              for name in sorted(expected):
+                  data = archive.read(name)
+                  if len(data) > 3_000_000 or data[:4] != b'RIFF' or data[8:12] != b'WEBP':
+                      raise SystemExit(f'Invalid WebP: {name}')
+                  dest = Path(name)
+                  dest.parent.mkdir(parents=True, exist_ok=True)
+                  dest.write_bytes(data)
+                  print(f'Installed {name}: {len(data)} bytes')
+          source.unlink()
+          PY
+      - name: Commit artwork
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/hero.webp assets/covers/*.webp assets/covers/bershagames-gorseller.zip
+          if ! git diff --cached --quiet; then
+            git commit -m "Install five original BershaGames WebP images"
+            git push
+          fi
