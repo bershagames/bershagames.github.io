@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://bershagames.github.io/sitemap.xml
