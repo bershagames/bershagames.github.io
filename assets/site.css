@@ -313,3 +313,11 @@ button,a{-webkit-tap-highlight-color:transparent}
  .site-page .unified-header .lang-switch{min-width:58px;padding-inline:8px}
 }
 @media(max-width:350px){.site-page .unified-brand-name strong{font-size:14px}.site-page .unified-brand-name>span{font-size:11px}}
+
+/* P0 v17: prevent horizontal overflow and improve readability */
+.site-page .panel,.site-page .tile,.site-page .social-card{min-width:0;overflow-wrap:anywhere}
+.site-page .tiles img{display:block;max-width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.site-page .social-grid{min-width:0}
+.site-page a:focus-visible,.site-page button:focus-visible{outline:3px solid #c9a5ff;outline-offset:3px}
+@media(max-width:650px){.site-page .tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.site-page .tile-copy{padding:12px}.site-page .tile-copy h2{font-size:clamp(14px,4vw,18px)}.site-page .tile-copy p{font-size:12px}.site-page .panel{max-width:100%}}
+@media(max-width:360px){.site-page .tiles{grid-template-columns:1fr}}
