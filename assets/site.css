@@ -237,3 +237,6 @@ body:has(main.site-page){background:#050b18;color:#f6f7ff;font:15px/1.65 system-
 .topbar .brand .brand-name>span{font-size:16px;font-weight:350;letter-spacing:.045em}
 @media(max-width:650px){.topbar .brand .brand-symbol{width:31px;height:31px}.topbar .brand .brand-name strong{font-size:17px}.topbar .brand .brand-name>span{font-size:13px}.topbar .brand .brand-identity{gap:6px}}
 @media(max-width:360px){.topbar .brand .brand-name strong{font-size:15px}.topbar .brand .brand-name>span{font-size:12px}}
+
+/* Transparent vector symbol; no white bitmap background */
+.topbar .brand .brand-symbol{mix-blend-mode:normal;filter:none;background:transparent;object-fit:contain}
