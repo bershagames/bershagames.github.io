@@ -240,3 +240,45 @@ body:has(main.site-page){background:#050b18;color:#f6f7ff;font:15px/1.65 system-
 
 /* Transparent vector symbol; no white bitmap background */
 .topbar .brand .brand-symbol{mix-blend-mode:normal;filter:none;background:transparent;object-fit:contain}
+
+/* P0 mobile usability and accessibility - 2026-10 */
+html{scroll-padding-top:24px;overflow-x:clip}
+body{overflow-wrap:break-word}
+img{max-width:100%}
+button,a{-webkit-tap-highlight-color:transparent}
+:where(a,button):focus-visible{outline:3px solid #c9a5ff;outline-offset:3px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+@media(max-width:650px){
+ .topbar .nav{min-height:66px;padding-block:10px;gap:9px}
+ .topbar .brand{flex:1 1 auto;min-width:0}
+ .topbar .brand .brand-identity{gap:7px}
+ .topbar .brand .brand-symbol{width:34px;height:34px}
+ .topbar .brand .brand-name strong{font-size:clamp(15px,4.3vw,19px)}
+ .topbar .brand .brand-name>span{font-size:clamp(11px,3.2vw,14px)}
+ .topbar .language{margin-left:auto;flex:0 0 auto}
+ .topbar .lang-button{min-height:44px;padding:9px 12px}
+ .topbar .menu-toggle{min-width:44px;min-height:44px;flex:0 0 44px}
+ .topbar .links.is-open{max-height:min(70dvh,460px);overflow-y:auto;overscroll-behavior:contain}
+ .hero h1{font-size:clamp(34px,8vw,48px);overflow-wrap:normal}
+ .hero p{font-size:clamp(14px,3.7vw,17px);line-height:1.6}
+ .hero .actions>a{min-height:46px}
+ .games-panel .section-head{gap:10px}
+ .games-panel .section-title{min-width:0}
+ .games-panel .section-head .outline{flex:0 0 auto;max-width:43%;text-align:center;white-space:normal}
+ .game-card .game-info .outline{min-height:44px;width:100%;text-align:center}
+ .site-page{min-width:0}
+ .site-page .site-header{gap:10px}
+ .site-page .site-nav{max-width:100%;overflow-x:auto;overscroll-behavior-x:contain}
+ .site-page .page-banner{height:auto;max-width:100%}
+}
+@media(max-width:360px){
+ .topbar .brand .brand-symbol{width:29px;height:29px}
+ .topbar .brand .brand-name strong{font-size:14px}
+ .topbar .brand .brand-name>span{font-size:11px}
+ .topbar .lang-button{padding-inline:8px}
+ .game-grid{gap:8px}
+ .game-info{padding:10px}
+ .game-info h3{font-size:14px}
+}
+
+.skip-link{position:fixed;top:8px;left:8px;z-index:9999;transform:translateY(-160%);background:#fff;color:#10152c;padding:10px 16px;border-radius:8px}.skip-link:focus{transform:none}
