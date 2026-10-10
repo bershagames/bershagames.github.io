@@ -196,3 +196,15 @@ body:has(main.site-page){background:#050b18;color:#f6f7ff;font:15px/1.65 system-
 @media(max-width:850px){.site-page .social-grid.creator-channels{grid-template-columns:repeat(2,minmax(0,1fr))}.site-page .creator-hero-v2{min-height:245px;padding:30px 24px}.site-page .creator-hero-v2 .creator-emblem{width:120px;height:120px;flex-basis:120px}.site-page .creator-hero-v2 .creator-emblem strong{font-size:46px}}
 @media(max-width:550px){.site-page .creator-hero-v2{min-height:260px;gap:17px;align-items:center;padding:24px 18px}.site-page .creator-hero-v2 .creator-emblem{width:88px;height:88px;flex-basis:88px;border-width:3px}.site-page .creator-hero-v2 .creator-emblem strong{font-size:34px}.site-page .creator-hero-v2 h2{font-size:clamp(28px,7vw,44px)}.site-page .creator-hero-v2 .creator-eyebrow{font-size:9px}.site-page .creator-hero-v2 p{font-size:10px}.site-page .social-grid.creator-channels{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.site-page .social-grid.creator-channels .social-card{min-height:208px;padding:15px 12px}.site-page .social-grid.creator-channels .social-card h2{font-size:15px;gap:7px}.site-page .social-grid.creator-channels .platform-icon{width:30px;height:30px;font-size:17px}.site-page .social-grid.creator-channels .social-card a{font-size:12px;padding:9px}.site-page .channel-section-title span{display:block;margin-top:4px}}
 @media(max-width:350px){.site-page .social-grid.creator-channels{grid-template-columns:1fr}.site-page .creator-hero-v2 .creator-emblem{display:none}}
+
+/* Brand integration v11: source files live under assets/brand/ */
+.brand-mark{background:#071429!important;overflow:hidden;padding:3px;box-shadow:0 0 0 1px #39518c,0 3px 20px #465cf53d!important}
+.brand-mark img{display:block;width:100%;height:100%;object-fit:contain}
+.site-page .creator-banner{background-image:linear-gradient(90deg,#07070bc7,#080a1260),url('/assets/brand/projectbersha-cover.webp');background-position:center;background-size:cover}
+.site-page .creator-banner .creator-copy{position:relative;z-index:1;text-shadow:0 3px 12px #000}
+.site-page .creator-photo{overflow:hidden;background:#101625!important}
+.site-page .creator-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:inherit}
+.site-page .creator-photo:not(.image-missing) span,.site-page .creator-photo:not(.image-missing) strong{display:none}
+.site-page .creator-photo.image-missing span,.site-page .creator-photo.image-missing strong{display:block}
+.site-page .creator-photo{position:relative}
+@media(max-width:550px){.site-page .creator-banner{min-height:260px;background-position:40% center}.site-page .creator-banner .creator-copy{background:#080c16a8;border-radius:12px;padding:10px}}
