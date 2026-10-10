@@ -349,3 +349,14 @@ button,a{-webkit-tap-highlight-color:transparent}
 .site-page details p{line-height:1.7;overflow-wrap:anywhere}
 .site-page .unified-nav a,.site-page .channel-link{touch-action:manipulation}
 @media(max-width:650px){.site-page .about-links{grid-template-columns:1fr;gap:10px}.site-page .about-links>a{padding:14px}.site-page .panel h1{overflow-wrap:break-word}}
+
+/* Batch 02: keyboard navigation, narrow screens and touch affordances */
+.site-page #page-content{scroll-margin-top:18px}
+.site-page .skip-link{position:fixed;top:8px;left:8px;z-index:9999;transform:translateY(-180%);background:#fff;color:#081020;padding:12px 16px;border-radius:9px;text-decoration:none}
+.site-page .skip-link:focus{transform:none}
+.site-page .unified-header .lang-switch:focus-visible,.site-page .subnav-toggle:focus-visible{outline:3px solid #cba8ff;outline-offset:3px}
+.site-page .unified-nav a[aria-current="page"]{font-weight:750}
+.site-page .panel a,.site-page .tile a{overflow-wrap:anywhere}
+.site-page img[loading="lazy"]{content-visibility:auto}
+@media(max-width:650px){.site-page .unified-header{min-width:0}.site-page .unified-brand-name{min-width:0}.site-page .unified-nav{max-height:min(70dvh,500px)}.site-page .panel{padding:clamp(16px,5vw,25px)}.site-page .page-banner{display:block;aspect-ratio:16/9;object-fit:cover}}
+@media(prefers-reduced-motion:reduce){.site-page *,.site-page *::before,.site-page *::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
