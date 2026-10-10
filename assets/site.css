@@ -176,3 +176,23 @@ body:has(main.site-page){background:#050b18;color:#f6f7ff;font:15px/1.65 system-
 /* Mobile layout override: some Android browsers use a wider CSS viewport. */
 @media(max-width:950px){body .site-page .social-grid.creator-channels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}body .site-page .creator-channels .social-card{min-width:0;min-height:180px;padding:18px}body .site-page .creator-channels .social-card h2{font-size:16px;overflow-wrap:anywhere}body .site-page .creator-channels .social-card a{font-size:13px}}
 @media(max-width:430px){body .site-page .social-grid.creator-channels{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}body .site-page .creator-channels .social-card{padding:13px;min-height:180px}body .site-page .creator-channels .social-card h2{gap:6px;font-size:14px}body .site-page .creator-channels .platform-icon{width:27px;height:27px;font-size:16px}body .site-page .creator-channels .social-card a{font-size:11px;padding:9px 8px}}
+
+/* Community redesign v9 — strong visual separation from the previous compact strip */
+.site-page .creator-hero-v2{position:relative;isolation:isolate;min-height:310px;display:flex;align-items:flex-end;gap:28px;padding:44px 38px;margin:26px 0 34px;border:1px solid #e97924;border-radius:25px;background:radial-gradient(ellipse at 15% 35%,#f87a235c,transparent 35%),radial-gradient(ellipse at 90% 0%,#ff8b2729,transparent 55%),repeating-linear-gradient(120deg,transparent 0 25px,#ffffff04 26px 27px),linear-gradient(130deg,#21100e,#090b14 75%);box-shadow:inset 0 0 70px #0007,0 20px 60px #0008;overflow:hidden}
+.site-page .creator-hero-v2:after{content:"PROJECT BERSHA";position:absolute;right:-15px;top:8px;font-size:clamp(65px,11vw,175px);line-height:1;font-weight:1000;letter-spacing:-.09em;color:#ff7d100b;white-space:nowrap;pointer-events:none;z-index:-1}
+.site-page .creator-hero-v2 .creator-emblem{width:170px;height:170px;flex-basis:170px;border:5px solid #ff8a1c;box-shadow:0 0 0 9px #ff8a171c,0 0 75px #ff74104b;transform:rotate(-8deg)}
+.site-page .creator-hero-v2 .creator-emblem strong{font-size:65px}
+.site-page .creator-hero-v2 .creator-copy{min-width:0}
+.site-page .creator-hero-v2 h2{font-size:clamp(40px,6.5vw,90px);letter-spacing:-.065em;margin:10px 0 15px}
+.site-page .creator-hero-v2 .creator-eyebrow{font-size:12px}
+.site-page .creator-hero-v2 p{font-size:13px}
+.site-page .channel-section-title{margin:30px 0 16px;font-size:clamp(21px,3vw,30px);font-weight:850}
+.site-page .channel-section-title span{font-size:14px;color:#e68e4d;font-weight:650}
+.site-page .social-grid.creator-channels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.site-page .social-grid.creator-channels .social-card{min-height:218px;padding:23px 21px;border-radius:17px}
+.site-page .social-grid.creator-channels .social-card h2{gap:12px;font-size:19px}
+.site-page .social-grid.creator-channels .platform-icon{width:40px;height:40px;font-size:23px}
+.site-page .social-grid.creator-channels .social-card a{min-height:42px;align-items:center}
+@media(max-width:850px){.site-page .social-grid.creator-channels{grid-template-columns:repeat(2,minmax(0,1fr))}.site-page .creator-hero-v2{min-height:245px;padding:30px 24px}.site-page .creator-hero-v2 .creator-emblem{width:120px;height:120px;flex-basis:120px}.site-page .creator-hero-v2 .creator-emblem strong{font-size:46px}}
+@media(max-width:550px){.site-page .creator-hero-v2{min-height:260px;gap:17px;align-items:center;padding:24px 18px}.site-page .creator-hero-v2 .creator-emblem{width:88px;height:88px;flex-basis:88px;border-width:3px}.site-page .creator-hero-v2 .creator-emblem strong{font-size:34px}.site-page .creator-hero-v2 h2{font-size:clamp(28px,7vw,44px)}.site-page .creator-hero-v2 .creator-eyebrow{font-size:9px}.site-page .creator-hero-v2 p{font-size:10px}.site-page .social-grid.creator-channels{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.site-page .social-grid.creator-channels .social-card{min-height:208px;padding:15px 12px}.site-page .social-grid.creator-channels .social-card h2{font-size:15px;gap:7px}.site-page .social-grid.creator-channels .platform-icon{width:30px;height:30px;font-size:17px}.site-page .social-grid.creator-channels .social-card a{font-size:12px;padding:9px}.site-page .channel-section-title span{display:block;margin-top:4px}}
+@media(max-width:350px){.site-page .social-grid.creator-channels{grid-template-columns:1fr}.site-page .creator-hero-v2 .creator-emblem{display:none}}
