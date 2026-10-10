@@ -208,3 +208,23 @@ body:has(main.site-page){background:#050b18;color:#f6f7ff;font:15px/1.65 system-
 .site-page .creator-photo.image-missing span,.site-page .creator-photo.image-missing strong{display:block}
 .site-page .creator-photo{position:relative}
 @media(max-width:550px){.site-page .creator-banner{min-height:260px;background-position:40% center}.site-page .creator-banner .creator-copy{background:#080c16a8;border-radius:12px;padding:10px}}
+
+/* Brand and mobile polish v12 */
+.topbar .brand{min-width:0;gap:0;letter-spacing:normal}
+.topbar .brand-wordmark{display:block;position:relative;width:clamp(150px,17vw,230px);height:53px;overflow:hidden}
+.topbar .brand-wordmark img{width:100%;height:100%;object-fit:contain;display:block;filter:brightness(1.22)}
+.topbar .brand-wordmark .brand-fallback{display:none;font-weight:850;letter-spacing:-.04em}
+.topbar .brand-wordmark.image-missing img{display:none}
+.topbar .brand-wordmark.image-missing .brand-fallback{display:flex;height:100%;align-items:center}
+.site-page .creator-banner-clean{display:flex;align-items:flex-end;justify-content:flex-start;min-height:clamp(230px,29vw,460px);padding:20px;background-image:url('/assets/brand/projectbersha-cover.webp');background-position:center;background-size:cover}
+.site-page .creator-banner-clean:after{display:none}
+.site-page .creator-banner-clean .creator-photo{width:clamp(72px,10vw,120px);height:clamp(72px,10vw,120px);flex-basis:clamp(72px,10vw,120px);transform:none;border-width:3px;box-shadow:0 8px 28px #000a}
+@media(max-width:650px){
+ .topbar .brand-wordmark{width:155px;height:42px}
+ .nav{gap:8px}
+ .site-page .creator-banner-clean{min-height:210px;padding:14px;background-position:center}
+ .site-page .creator-banner-clean .creator-photo{width:68px;height:68px;flex-basis:68px}
+ .site-page .creator-channels .social-card{overflow-wrap:anywhere}
+ .site-page .social-grid.creator-channels .social-card a{min-height:40px}
+}
+@media(max-width:390px){.topbar .brand-wordmark{width:137px}}
