@@ -236,3 +236,8 @@ body.theme-esnaf .spotlight-state{color:#ffcb9e}
 body.theme-yanki .spotlight-state{color:#a9f2d4}
 body.theme-transit .spotlight-state{color:#a4e5ff}
 @media(max-width:760px){body[class*="theme-"] .header{background:#10182af2}body:after{background-size:cover}body.theme-home .hero{padding-top:48px}}
+
+/* 4.1 visibility correction: gradients are painted directly on body */
+body[class*="theme-"]{background-color:#11172b;background-image:var(--page-ambient);background-attachment:fixed;background-size:cover;background-repeat:no-repeat}
+body[class*="theme-"]:after{display:none}
+@media(max-width:760px){body[class*="theme-"]{background-attachment:scroll;background-size:100% 100%}}
