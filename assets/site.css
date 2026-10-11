@@ -496,3 +496,35 @@ body>a.skip-link:focus,body>a.skip-link:focus-visible,body>.skip-link:focus,body
 
 /* Empty official-news feed: hide controls until a verified announcement exists */
 .site-page .journal-controls[hidden],.site-page .journal-tools[hidden],.site-page .journal-filter-feedback[hidden]{display:none!important}
+
+/* BershaGames 2.0: distinctive premium interior page layouts */
+.studio-v2{background:radial-gradient(ellipse 70% 26% at 72% 3%,#49317d44,transparent 75%),#050915}
+.studio-v2 .site-page{max-width:1600px;padding-inline:clamp(16px,3vw,48px)}
+.studio-v2 .site-header{border:1px solid #ffffff22;border-top:0;border-radius:0 0 20px 20px;box-shadow:0 16px 42px #0007}
+.studio-v2 .site-page>section[data-lang]{position:relative;max-width:1260px}
+.studio-v2 .site-page>section[data-lang]>h1{position:relative;z-index:1;margin-top:25px;margin-bottom:15px;padding-top:clamp(50px,6vw,95px);font-size:clamp(42px,6.5vw,86px);line-height:1.02;letter-spacing:-.065em;font-weight:900;text-wrap:balance}
+.studio-v2 .site-page>section[data-lang]>h1:before{content:"BERSHAGAMES  /  STUDIO";position:absolute;top:0;left:0;font-size:11px;font-weight:850;letter-spacing:.2em;color:#bd95ff}
+.studio-v2 .site-page>section[data-lang]>h1:after{content:"";display:block;width:74px;height:4px;margin-top:25px;border-radius:4px;background:linear-gradient(90deg,#c491ff,#6b8bff)}
+.studio-v2 .site-page>section[data-lang]>.lead{font-size:clamp(17px,1.75vw,21px);line-height:1.7;color:#c5d0e4;max-width:760px;margin-bottom:40px}
+.studio-v2 .site-page>section[data-lang]:before{content:"";position:absolute;right:-4%;top:0;width:min(52vw,610px);height:340px;z-index:0;pointer-events:none;background:radial-gradient(ellipse at 60% 35%,#7041be44,transparent 67%);filter:blur(12px)}
+.studio-v2 .site-page .tiles{gap:clamp(18px,2.2vw,30px)}
+.studio-v2 .site-page .tile{position:relative;overflow:hidden;border-radius:22px;border:1px solid #526089;background:#0f1a32;box-shadow:0 24px 50px #0006;transition:transform .2s,border-color .2s}
+.studio-v2 .site-page .tile:hover{transform:translateY(-5px);border-color:#c396ff}
+.studio-v2 .site-page .tile img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;filter:saturate(1.08)}
+.studio-v2 .site-page .tile-copy{padding:clamp(17px,2.4vw,27px)}
+.studio-v2 .site-page .tile-copy h2{font-size:clamp(20px,2.3vw,29px);letter-spacing:-.035em}
+.studio-v2 .site-page .tile-copy p{line-height:1.6;color:#bfcee4}
+.studio-v2 .site-page .panel,.studio-v2 .site-page .project-info,.studio-v2 .site-page .updates-grid a{border-color:#43557b;background:linear-gradient(140deg,#192743,#0a152c);border-radius:22px}
+.studio-v2 .site-page .panel{padding:clamp(20px,3vw,34px)}
+.studio-v2 .site-page .updates-grid a:hover{transform:translateY(-3px);border-color:#ba8aff}
+.studio-v2 .site-page footer{border-top:1px solid #ffffff2a;margin-top:70px;padding-top:32px}
+.studio-portfolio .site-page>section[data-lang]>h1{background:linear-gradient(95deg,#fff,#d5b5ff 80%);background-clip:text;color:transparent}
+.studio-block-merge-rush .site-page>section[data-lang]:before{background:radial-gradient(ellipse at 60% 35%,#874bff5e,transparent 70%)}
+.studio-esnaf .site-page>section[data-lang]:before{background:radial-gradient(ellipse at 60% 35%,#40a9b64d,transparent 70%)}
+.studio-yanki-bahcesi .site-page>section[data-lang]:before{background:radial-gradient(ellipse at 60% 35%,#b44fa95c,transparent 70%)}
+.studio-transit-empire-world .site-page>section[data-lang]:before{background:radial-gradient(ellipse at 60% 35%,#4789cc4d,transparent 70%)}
+.studio-community .site-page>section[data-lang]:before{background:radial-gradient(ellipse at 60% 35%,#b64e945c,transparent 70%)}
+.studio-updates .site-page .journal-feed{min-height:110px;background:linear-gradient(125deg,#172442,#10152b);border:1px solid #53618b;border-radius:20px}
+.studio-updates .site-page .journal-feed p{font-size:clamp(16px,1.5vw,19px);line-height:1.7;color:#d4dded}
+.studio-updates .site-page .journal-controls[hidden],.studio-updates .site-page .journal-tools[hidden],.studio-updates .site-page .journal-filter-feedback[hidden]{display:none!important}
+@media(max-width:760px){.studio-v2 .site-page>section[data-lang]>h1{font-size:clamp(40px,10vw,60px);padding-top:60px}.studio-v2 .site-page>section[data-lang]:before{height:250px;width:90%}.studio-v2 .site-page .tile:hover,.studio-v2 .site-page .updates-grid a:hover{transform:none}.studio-v2 .site-page footer{margin-top:45px}}
