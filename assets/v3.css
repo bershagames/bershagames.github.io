@@ -208,3 +208,31 @@ body{min-width:320px}
 @media(max-width:850px){.nav.open{max-height:calc(100dvh - 72px);box-shadow:0 22px 50px #0009}.header-inner{min-height:70px}.footer{margin-top:0}}
 @media(max-width:600px){.footer-top{gap:22px}.footer-nav{gap:7px 14px}.spotlight-art{border-radius:15px}.spotlight-actions .btn{font-weight:700}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* BershaGames 4.1 — studio identity and per-page ambient color system */
+body{background:#0d1123}
+body:before{display:none}
+body:after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:var(--page-ambient);background-repeat:no-repeat}
+body.theme-home{--page-ambient:radial-gradient(ellipse 85% 48% at 80% 4%,#55328b91,transparent 78%),radial-gradient(ellipse 75% 55% at 0% 48%,#194c9691,transparent 78%),linear-gradient(155deg,#14132f 0%,#101a39 52%,#1c1335 100%)}
+body.theme-games{--page-ambient:radial-gradient(ellipse 80% 45% at 85% 0%,#50328e78,transparent 75%),radial-gradient(ellipse 80% 50% at 0% 85%,#15578b80,transparent 78%),linear-gradient(160deg,#111b38,#191330 75%,#0f2440)}
+body.theme-community{--page-ambient:radial-gradient(ellipse 90% 45% at 75% 4%,#9b327d85,transparent 77%),radial-gradient(ellipse 80% 50% at 0% 65%,#5b34948c,transparent 75%),linear-gradient(160deg,#29152f,#181538 58%,#1c2547)}
+body.theme-studio{--page-ambient:radial-gradient(ellipse 80% 55% at 80% 0%,#4e429b85,transparent 80%),linear-gradient(145deg,#161733,#172447 60%,#141b31)}
+body.theme-support{--page-ambient:radial-gradient(ellipse 75% 45% at 85% 5%,#28678b78,transparent 75%),linear-gradient(145deg,#102339,#17263e 55%,#15172c)}
+body.theme-updates{--page-ambient:radial-gradient(ellipse 80% 50% at 90% 5%,#53388785,transparent 77%),linear-gradient(145deg,#1a1737,#1b2342 60%,#111d36)}
+body.theme-legal{--page-ambient:radial-gradient(ellipse 75% 50% at 80% 5%,#3d4c8580,transparent 80%),linear-gradient(150deg,#161d35,#182840 55%,#171a34)}
+body.theme-bmr{--page-ambient:radial-gradient(ellipse 90% 45% at 82% 3%,#2859b2a3,transparent 77%),radial-gradient(ellipse 70% 52% at 0% 78%,#5a2e9d85,transparent 80%),linear-gradient(155deg,#101f48,#141c42 60%,#24173e)}
+body.theme-esnaf{--page-ambient:radial-gradient(ellipse 90% 45% at 82% 3%,#a65c378e,transparent 77%),radial-gradient(ellipse 70% 50% at 0% 85%,#5f386d78,transparent 80%),linear-gradient(155deg,#312035,#302438 60%,#1d253d)}
+body.theme-yanki{--page-ambient:radial-gradient(ellipse 90% 45% at 82% 3%,#278c7b91,transparent 77%),radial-gradient(ellipse 70% 50% at 0% 85%,#506fa17d,transparent 80%),linear-gradient(155deg,#132e36,#173a3d 60%,#172d48)}
+body.theme-transit{--page-ambient:radial-gradient(ellipse 90% 45% at 82% 3%,#1b789b9e,transparent 77%),radial-gradient(ellipse 70% 50% at 0% 85%,#3b549a87,transparent 80%),linear-gradient(155deg,#102a45,#172e51 60%,#182440)}
+body[class*="theme-"] .header{background:#11172ad9;border-bottom-color:#ffffff24}
+body.theme-home .hero:before{background:#9e6af53c}
+body.theme-home .marquee{background:#252044b8}
+body.theme-community .feature-panel{background:linear-gradient(145deg,#42234bbd,#201d4dbd)}
+body[class*="theme-"] .game{background:linear-gradient(140deg,#242d4bcc,#141b35e8)}
+body[class*="theme-"] .footer{background:#10152ac7;border-top:1px solid #ffffff24}
+body[class*="theme-"] .spotlight-art{box-shadow:0 22px 80px #080c2366}
+body.theme-bmr .spotlight-state{color:#bad2ff}
+body.theme-esnaf .spotlight-state{color:#ffcb9e}
+body.theme-yanki .spotlight-state{color:#a9f2d4}
+body.theme-transit .spotlight-state{color:#a4e5ff}
+@media(max-width:760px){body[class*="theme-"] .header{background:#10182af2}body:after{background-size:cover}body.theme-home .hero{padding-top:48px}}
