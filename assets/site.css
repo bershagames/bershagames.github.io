@@ -493,3 +493,6 @@ body>a.skip-link:focus,body>a.skip-link:focus-visible,body>.skip-link:focus,body
 @media(max-width:950px){.site-page .unified-header{min-height:68px}.site-page .unified-nav{background:#101b32;border:1px solid #344361;border-radius:16px;padding:12px}.site-page .unified-nav a{min-height:48px}}
 @media(max-width:600px){.site-page>section{padding-top:30px;padding-bottom:24px}.site-page>section>h1{font-size:clamp(34px,9vw,48px)}.site-page .panel,.site-page .tile{border-radius:16px}.site-page .journal-controls,.site-page .journal-tools{padding:13px}.site-page .updates-grid a:hover{transform:none}}
 @media(prefers-reduced-motion:reduce){.site-page .updates-grid a:hover{transform:none}}
+
+/* Empty official-news feed: hide controls until a verified announcement exists */
+.site-page .journal-controls[hidden],.site-page .journal-tools[hidden],.site-page .journal-filter-feedback[hidden]{display:none!important}
