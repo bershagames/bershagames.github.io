@@ -442,3 +442,8 @@ body>a.skip-link:focus,body>a.skip-link:focus-visible{transform:translateY(0)!im
 .site-page .updates-grid a,.site-page .project-info dl>div{transition:border-color .15s ease,background-color .15s ease}
 @media(hover:hover){.site-page .updates-grid a:hover,.site-page .project-info dl>div:hover{border-color:#9b78e6}}
 @media(max-width:600px){.site-page .journal-feed{min-height:58px}.site-page .journal-entry{padding:16px}.site-page .journal-count{white-space:normal}}
+
+/* Paket 10: persistent accessible skip navigation; visible on keyboard and touch */
+body>a.skip-link{position:fixed!important;top:8px!important;left:8px!important;z-index:2147483647!important;transform:none!important;opacity:1!important;visibility:visible!important;display:inline-flex!important;align-items:center!important;min-height:40px!important;padding:8px 12px!important;border:2px solid #b995ff!important;border-radius:10px!important;background:#111b35!important;color:#fff!important;box-shadow:0 4px 16px #0008!important;font-size:12px!important;max-width:calc(100vw - 16px)!important}
+body>a.skip-link:focus,body>a.skip-link:focus-visible{background:#fff!important;color:#111b35!important;outline:3px solid #d9b8ff!important;outline-offset:3px!important}
+.site-page .journal-filter-feedback{display:block!important;opacity:1!important;visibility:visible!important}
