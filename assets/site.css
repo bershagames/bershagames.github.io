@@ -447,3 +447,20 @@ body>a.skip-link:focus,body>a.skip-link:focus-visible{transform:translateY(0)!im
 body>a.skip-link{position:fixed!important;top:8px!important;left:8px!important;z-index:2147483647!important;transform:none!important;opacity:1!important;visibility:visible!important;display:inline-flex!important;align-items:center!important;min-height:40px!important;padding:8px 12px!important;border:2px solid #b995ff!important;border-radius:10px!important;background:#111b35!important;color:#fff!important;box-shadow:0 4px 16px #0008!important;font-size:12px!important;max-width:calc(100vw - 16px)!important}
 body>a.skip-link:focus,body>a.skip-link:focus-visible{background:#fff!important;color:#111b35!important;outline:3px solid #d9b8ff!important;outline-offset:3px!important}
 .site-page .journal-filter-feedback{display:block!important;opacity:1!important;visibility:visible!important}
+
+/* BershaGames Packages 11-14 — consistent studio pages */
+.site-page{max-width:1440px;margin:0 auto;padding:0 clamp(18px,3vw,44px);color:#f4f5ff}
+.site-page .unified-header{position:sticky;top:0;z-index:100;background:rgba(5,11,24,.96);backdrop-filter:blur(16px);border-bottom:1px solid #283956;min-height:76px}
+.site-page .unified-brand{font-weight:850;letter-spacing:-.035em}
+.site-page .unified-nav{gap:clamp(4px,.7vw,12px)}
+.site-page .unified-nav a{border-radius:11px;padding:11px 12px;min-height:44px;display:inline-flex;align-items:center;font-weight:650;white-space:nowrap}
+.site-page .unified-nav a:hover,.site-page .unified-nav a:focus-visible{background:#202c49;color:#ead9ff}
+.site-page .unified-nav a[aria-current="page"],.site-page .unified-nav a[data-studio-active="true"]{background:#332053;border:1px solid #7650b2;color:#fff}
+.site-page>section{max-width:1160px;margin-left:auto;margin-right:auto}
+.site-page>section>h1{font-size:clamp(32px,4.6vw,54px);line-height:1.12;letter-spacing:-.04em;margin-top:clamp(28px,4vw,64px)}
+.site-page>section>.lead{font-size:clamp(16px,1.7vw,19px);line-height:1.65;max-width:770px}
+.site-page .panel,.site-page .tile,.site-page .journal-feed,.site-page .project-info,.site-page .updates-grid a{border-radius:18px;box-shadow:0 14px 36px #0003}
+.site-page .journal-controls,.site-page .journal-tools{gap:12px}
+.site-page footer{margin-top:64px;border-top:1px solid #293c60;padding-top:24px;padding-bottom:28px;color:#b6c4db}
+@media(max-width:950px){.site-page .unified-header{min-height:66px}.site-page .unified-nav{box-shadow:0 14px 30px #0008}.site-page .unified-nav a{width:100%;min-height:48px}}
+@media(max-width:600px){.site-page>section>h1{margin-top:30px}.site-page .panel,.site-page .tile{border-radius:16px}.site-page footer{margin-top:42px}}
