@@ -129,3 +129,32 @@
 .detail-contact h2{font-size:28px}
 .detail-contact p{font-size:15px;line-height:1.6}
 }
+
+/* 3.4 — minimal, artwork-first game detail experience */
+.game-detail-page{min-height:60vh}
+.game-spotlight{padding-top:clamp(35px,6vw,82px);padding-bottom:clamp(48px,6vw,80px)}
+.spotlight-heading{max-width:850px;margin-bottom:clamp(24px,3vw,36px)}
+.spotlight-overline{display:flex;align-items:center;gap:9px;color:#c1a0fa;font-size:11px;font-weight:800;letter-spacing:.17em}
+.spotlight-dot{width:7px;height:7px;border-radius:50%;background:#ae78fb;box-shadow:0 0 15px #a47dff}
+.spotlight-heading h1{font:700 clamp(39px,6vw,80px)/1.05 'Space Grotesk',sans-serif;letter-spacing:-.065em;margin:17px 0 12px}
+.spotlight-description{font-size:clamp(16px,1.8vw,21px);line-height:1.6;color:#bbc3d6;max-width:650px;margin:0}
+.spotlight-tags{display:flex;gap:9px;flex-wrap:wrap;margin-top:20px}
+.spotlight-tags>span{display:inline-flex;align-items:center;padding:8px 13px;border:1px solid #ffffff29;border-radius:999px;color:#d9d9e9;background:#ffffff08;font-size:12px;font-weight:650}
+.spotlight-tags>.spotlight-state{color:#d5b5ff;border-color:#ad7ef85c;background:#8b55e81b}
+.spotlight-art{margin:0;overflow:hidden;border-radius:24px;border:1px solid #ffffff24;background:#101423;box-shadow:0 20px 70px #0006}
+.spotlight-art img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain}
+.spotlight-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.spotlight-actions .btn{min-width:150px}
+@media(max-width:760px){
+.game-spotlight{padding-top:34px;padding-bottom:48px}
+.spotlight-heading{margin-bottom:22px}
+.spotlight-heading h1{font-size:clamp(35px,9vw,51px);margin:14px 0 10px}
+.spotlight-description{font-size:16px;line-height:1.55}
+.spotlight-tags{margin-top:16px;gap:8px}
+.spotlight-tags>span{font-size:11px;padding:7px 11px}
+.spotlight-art{border-radius:15px;box-shadow:0 12px 30px #0005}
+.spotlight-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:18px}
+.spotlight-actions .btn{min-width:0;min-height:48px;padding:10px 12px;font-size:13px}
+.spotlight-actions .btn:first-child{grid-column:1/-1}
+}
+@media(prefers-reduced-motion:reduce){.spotlight-art,.spotlight-actions .btn{transition:none}}
