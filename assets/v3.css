@@ -185,3 +185,10 @@
 .document-card{padding:20px}
 .document-links a{width:100%}
 }
+
+/* 3.8 — editorial homepage with compact game portfolio */
+@media(min-width:851px){.hero{padding:78px 0 88px}.hero-art{min-height:455px}.section{padding:75px 0}.game-body p{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}}
+.game{position:relative}.game .cover img{object-position:center}.game-body{display:flex;flex-direction:column}.game-link{margin-top:auto}
+.game:focus-visible{outline:3px solid #caa7ff;outline-offset:5px}
+@media(max-width:850px){.hero{padding:42px 0 50px}.hero-art{min-height:300px}.section{padding:48px 0}.game-body{padding:20px}.game-body p{font-size:14px;line-height:1.5;margin-bottom:13px}.game-link{font-size:12px}.section-head{margin-bottom:22px}.section-head h2{font-size:clamp(29px,7vw,42px)}}
+@media(max-width:500px){.game{border-radius:18px}.game-body h3{font-size:25px}.game .cover{aspect-ratio:16/9}.game-body p{display:none}.game-body{padding:16px 18px 20px}.game-meta{font-size:10px}.hero h1{font-size:clamp(43px,10.5vw,60px)}.hero p{line-height:1.55}.marquee .wrap{gap:12px}}
