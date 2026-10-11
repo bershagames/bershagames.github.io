@@ -100,3 +100,32 @@
 .detail-cover{position:relative}.detail-cover:after{content:"";position:absolute;inset:auto 0 0;height:18%;pointer-events:none;background:linear-gradient(0deg,#070914b8,transparent)}
 .detail-highlights{padding-top:26px}.highlight-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.highlight{min-height:180px;border:1px solid #ffffff29;background:linear-gradient(135deg,#1a1f35,#0d1221);border-radius:20px;padding:26px;display:flex;flex-direction:column;justify-content:space-between;transition:border-color .2s,transform .2s}.highlight:hover{border-color:#ad82ff;transform:translateY(-3px)}.highlight>span{font:700 12px 'Space Grotesk';color:#bb9bf9;letter-spacing:.12em}.highlight h3{font:700 clamp(19px,2vw,27px)/1.2 'Space Grotesk';letter-spacing:-.03em;margin:0}.detail-contact{margin-top:26px;border:1px solid #6d579c77;border-radius:24px;padding:clamp(25px,4vw,44px);display:flex;align-items:center;justify-content:space-between;gap:24px;background:radial-gradient(ellipse at 85% 20%,#7042b84d,transparent 65%),#17192d}.detail-contact h2{font:700 clamp(26px,3.2vw,42px) 'Space Grotesk';letter-spacing:-.04em;margin:9px 0}.detail-contact p{color:#c0c5d7;margin:0;max-width:570px}.detail-contact .btn{flex-shrink:0}
 @media(max-width:760px){.detail-intro,.detail-contact{align-items:flex-start;flex-direction:column}.highlight-grid{grid-template-columns:1fr;gap:12px}.highlight{min-height:112px;padding:21px;gap:20px}.highlight h3{font-size:23px}.detail-contact{padding:26px}.detail-intro .btn,.detail-contact .btn{width:100%}.detail-highlights{padding-top:10px}}
+
+/* 3.3 — compact mobile game project pages; preserve full artwork */
+.detail-cover img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain}
+@media(max-width:760px){
+.page-hero:has(+ .section .detail-cover){padding:34px 0 12px}
+.page-hero:has(+ .section .detail-cover) h1{font-size:clamp(34px,8.5vw,49px);line-height:1.07;margin:13px 0}
+.page-hero:has(+ .section .detail-cover) p{font-size:15px;line-height:1.55;margin:0}
+.page-hero + .section{padding-top:12px;padding-bottom:22px}
+.detail-intro{padding-bottom:14px;gap:0}
+.detail-intro>div{display:none}
+.detail-intro>.btn{display:none}
+.detail-cover{border-radius:16px;box-shadow:0 12px 32px #0005}
+.detail-cover img{width:100%;height:auto;aspect-ratio:16/9;object-fit:contain}
+.info-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:14px}
+.info-card{min-width:0;padding:15px;border-radius:13px}
+.info-card h3{font-size:15px;line-height:1.3;margin:5px 0 0;overflow-wrap:anywhere}
+.info-card .eyebrow{font-size:10px}
+.info-card:last-child{grid-column:1/-1}
+.page-hero + .section .actions{margin-top:16px;gap:10px}
+.page-hero + .section .actions .btn{flex:1;min-height:46px;font-size:13px;padding:10px 12px}
+.detail-highlights{padding-top:16px}
+.detail-highlights .section-head{margin-bottom:16px}
+.detail-highlights .section-head h2{font-size:clamp(28px,7.2vw,36px)}
+.highlight{min-height:92px;padding:18px;gap:12px}
+.highlight h3{font-size:19px}
+.detail-contact{margin-top:16px;padding:22px}
+.detail-contact h2{font-size:28px}
+.detail-contact p{font-size:15px;line-height:1.6}
+}
