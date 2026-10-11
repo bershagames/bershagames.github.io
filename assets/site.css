@@ -464,3 +464,32 @@ body>a.skip-link:focus,body>a.skip-link:focus-visible{background:#fff!important;
 .site-page footer{margin-top:64px;border-top:1px solid #293c60;padding-top:24px;padding-bottom:28px;color:#b6c4db}
 @media(max-width:950px){.site-page .unified-header{min-height:66px}.site-page .unified-nav{box-shadow:0 14px 30px #0008}.site-page .unified-nav a{width:100%;min-height:48px}}
 @media(max-width:600px){.site-page>section>h1{margin-top:30px}.site-page .panel,.site-page .tile{border-radius:16px}.site-page footer{margin-top:42px}}
+
+/* Premium redesign: unified subpage design + corrected accessible skip link */
+body{background:radial-gradient(ellipse 50% 22% at 85% 0%,#30205a66,transparent 75%),#050915;color:#f6f4ff}
+.site-page{max-width:1480px;padding-inline:clamp(18px,3vw,48px);background:transparent}
+.site-page .unified-header{min-height:82px;background:rgba(5,9,21,.94);border-bottom:1px solid #ffffff24;box-shadow:0 12px 35px #0004;backdrop-filter:blur(18px)}
+.site-page .unified-brand-name{letter-spacing:-.055em}
+.site-page .unified-nav a{border:1px solid transparent;color:#cbd3e5;transition:background .2s,border-color .2s}
+.site-page .unified-nav a[aria-current="page"],.site-page .unified-nav a[data-studio-active="true"]{border-color:#9870d3;background:linear-gradient(125deg,#55328a88,#262453bb);color:#fff}
+.site-page .unified-nav a:hover{background:#28304e;color:#fff}
+.site-page>section{max-width:1200px;padding-top:clamp(30px,4vw,55px);padding-bottom:clamp(22px,3vw,40px)}
+.site-page>section>h1{font-size:clamp(38px,4.5vw,64px);font-weight:850;letter-spacing:-.055em;line-height:1.08;margin:10px 0 20px}
+.site-page>section>.lead{font-size:clamp(16px,1.6vw,20px);line-height:1.75;color:#b9c7df;max-width:780px;margin-bottom:35px}
+.site-page h2{letter-spacing:-.025em}
+.site-page .panel,.site-page .tile,.site-page .project-info,.site-page .journal-feed,.site-page .updates-grid a{background:linear-gradient(145deg,#15223c,#0b162c);border:1px solid #344666;border-radius:20px;box-shadow:0 18px 44px #0004}
+.site-page .updates-grid a{padding:clamp(17px,2vw,25px);transition:transform .2s,border-color .2s}
+.site-page .updates-grid a:hover{transform:translateY(-3px);border-color:#aa82eb}
+.site-page .journal-controls,.site-page .journal-tools{background:#101b33;border:1px solid #2e4062;border-radius:16px;padding:16px;gap:13px}
+.site-page .journal-controls select,.site-page .journal-tools select,.site-page .journal-tools input{background:#172440;border-color:#52618b;border-radius:12px;min-height:48px;color:#fff}
+.site-page .journal-feed{padding:clamp(20px,2.6vw,30px)}
+.site-page .journal-filter-feedback{background:#1d2245;border-color:#bb8aff;color:#decaff}
+.site-page footer{margin-top:60px;border-top:1px solid #ffffff28;padding:28px 0 40px;color:#acbbd3}
+.site-page footer a{color:#d3baf6}
+.site-page footer a:hover{color:#fff}
+.site-page .page-banner{border-radius:20px;box-shadow:0 24px 55px #0006}
+body>a.skip-link,body>.skip-link{position:fixed!important;top:10px!important;left:10px!important;z-index:2147483647!important;display:inline-flex!important;align-items:center!important;min-height:44px!important;max-width:calc(100vw - 20px)!important;transform:translateY(calc(-100% - 26px))!important;opacity:1!important;visibility:visible!important;pointer-events:auto!important;background:#fff!important;color:#11172d!important;border:2px solid #a57ae7!important;border-radius:10px!important;padding:10px 16px!important;font-weight:800!important;box-shadow:0 8px 24px #0009!important}
+body>a.skip-link:focus,body>a.skip-link:focus-visible,body>.skip-link:focus,body>.skip-link:focus-visible{transform:translateY(0)!important;outline:3px solid #d9b8ff!important;outline-offset:2px!important}
+@media(max-width:950px){.site-page .unified-header{min-height:68px}.site-page .unified-nav{background:#101b32;border:1px solid #344361;border-radius:16px;padding:12px}.site-page .unified-nav a{min-height:48px}}
+@media(max-width:600px){.site-page>section{padding-top:30px;padding-bottom:24px}.site-page>section>h1{font-size:clamp(34px,9vw,48px)}.site-page .panel,.site-page .tile{border-radius:16px}.site-page .journal-controls,.site-page .journal-tools{padding:13px}.site-page .updates-grid a:hover{transform:none}}
+@media(prefers-reduced-motion:reduce){.site-page .updates-grid a:hover{transform:none}}
