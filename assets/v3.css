@@ -192,3 +192,19 @@
 .game:focus-visible{outline:3px solid #caa7ff;outline-offset:5px}
 @media(max-width:850px){.hero{padding:42px 0 50px}.hero-art{min-height:300px}.section{padding:48px 0}.game-body{padding:20px}.game-body p{font-size:14px;line-height:1.5;margin-bottom:13px}.game-link{font-size:12px}.section-head{margin-bottom:22px}.section-head h2{font-size:clamp(29px,7vw,42px)}}
 @media(max-width:500px){.game{border-radius:18px}.game-body h3{font-size:25px}.game .cover{aspect-ratio:16/9}.game-body p{display:none}.game-body{padding:16px 18px 20px}.game-meta{font-size:10px}.hero h1{font-size:clamp(43px,10.5vw,60px)}.hero p{line-height:1.55}.marquee .wrap{gap:12px}}
+
+/* 4.0 — final studio design pass */
+body{min-width:320px}
+.game-detail-page:has(img[src*="block-merge-rush"]){--game-glow:#4777f02b;--game-accent:#90b4ff}
+.game-detail-page:has(img[src*="/esnaf."]){--game-glow:#d48a3828;--game-accent:#f0bc83}
+.game-detail-page:has(img[src*="yanki-bahcesi"]){--game-glow:#40a78327;--game-accent:#91e6bb}
+.game-detail-page:has(img[src*="transit-empire-world"]){--game-glow:#348cc02c;--game-accent:#92d7f4}
+.game-spotlight{position:relative;isolation:isolate}
+.game-spotlight:before{content:"";position:absolute;z-index:-1;pointer-events:none;inset:0 0 auto;height:430px;background:radial-gradient(ellipse 55% 65% at 82% 32%,var(--game-glow,#6644b32b),transparent)}
+.spotlight-dot{background:var(--game-accent,#ae78fb);box-shadow:0 0 15px var(--game-accent,#ae78fb)}
+.spotlight-tags>.spotlight-state{border-color:color-mix(in srgb,var(--game-accent,#b68afc) 42%,transparent);color:var(--game-accent,#d5b5ff)}
+.spotlight-art{transition:border-color .2s}.spotlight-art:hover{border-color:color-mix(in srgb,var(--game-accent,#ad82ff) 55%,transparent)}
+.footer-nav{row-gap:12px}.footer-nav a{min-height:32px;display:inline-flex;align-items:center}
+@media(max-width:850px){.nav.open{max-height:calc(100dvh - 72px);box-shadow:0 22px 50px #0009}.header-inner{min-height:70px}.footer{margin-top:0}}
+@media(max-width:600px){.footer-top{gap:22px}.footer-nav{gap:7px 14px}.spotlight-art{border-radius:15px}.spotlight-actions .btn{font-weight:700}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
