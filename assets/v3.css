@@ -158,3 +158,30 @@
 .spotlight-actions .btn:first-child{grid-column:1/-1}
 }
 @media(prefers-reduced-motion:reduce){.spotlight-art,.spotlight-actions .btn{transition:none}}
+
+/* 3.6 — compact navigation, per-game document directory */
+.document-section{padding-top:12px}
+.document-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.document-card{border:1px solid #ffffff25;border-radius:19px;background:linear-gradient(145deg,#191d30,#101320);padding:25px;min-width:0}
+.document-card h2{font:700 clamp(22px,2.5vw,30px)/1.2 'Space Grotesk',sans-serif;letter-spacing:-.035em;margin:0 0 12px}
+.document-card p{color:#b8bfd0;font-size:14px;line-height:1.65;margin:0 0 18px}
+.document-links{display:flex;flex-wrap:wrap;gap:9px}
+.document-links a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 14px;border:1px solid #9e78f45e;border-radius:11px;background:#9b6ef11a;color:#eee3ff;font-size:13px;font-weight:750}
+.document-links a:hover{background:#9b6ef136;border-color:#b48dff}
+.document-note{font-size:13px;line-height:1.6;color:#aeb4c8;max-width:760px;margin:22px 0 0}
+.spotlight-actions{gap:10px}
+.spotlight-actions .btn{min-width:0;min-height:46px;padding:10px 17px;font-size:13px}
+@media(max-width:850px){
+.nav.open{overflow-y:auto;overscroll-behavior:contain;padding:18px max(18px,calc((100vw - 640px)/2)) 28px;gap:8px}
+.nav.open a{display:flex;align-items:center;min-height:54px;border:1px solid #ffffff16;border-radius:13px;background:#151929;padding:14px 18px;font-size:17px}
+.nav.open a[aria-current=page]{border-color:#a37ef477;background:#7c56d52a}
+.document-grid{grid-template-columns:1fr}
+}
+@media(max-width:760px){
+.spotlight-actions{display:flex;flex-wrap:wrap;gap:9px}
+.spotlight-actions .btn{flex:0 1 auto;min-height:44px;padding:10px 13px;font-size:12px}
+.spotlight-actions .btn:first-child{flex:1 0 100%}
+.document-section{padding-top:0}
+.document-card{padding:20px}
+.document-links a{width:100%}
+}
