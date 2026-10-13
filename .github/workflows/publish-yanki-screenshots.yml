@@ -1,0 +1,53 @@
+name: Publish Yanki Bahcesi screenshots
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'assets/yanki-bahcesi-site-gorselleri.zip'
+      - '.github/workflows/publish-yanki-screenshots.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Safely extract and publish six screenshots
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from zipfile import ZipFile
+          import io
+          src=Path('assets/yanki-bahcesi-site-gorselleri.zip')
+          dest=Path('assets/screenshots/yanki-bahcesi')
+          dest.mkdir(parents=True,exist_ok=True)
+          names=['01-ana-menu.webp','02-ay-isigi-bahcesi.webp','03-ilk-yanki.webp','04-dar-gecit.webp','05-bahcenin-hafizasi.webp','06-sessiz-uyum.webp']
+          with ZipFile(src) as z:
+              entries=[i for i in z.infolist() if not i.is_dir() and i.filename.lower().endswith('.webp')]
+              if len(entries)!=6:
+                  raise SystemExit(f'Expected exactly 6 WebP screenshots; got {len(entries)}')
+              if any(i.file_size>6_000_000 for i in entries):
+                  raise SystemExit('Screenshot exceeds 6 MB')
+              # Preserve numeric order of names in the supplied archive.
+              entries.sort(key=lambda i:i.filename.lower())
+              for name,entry in zip(names,entries):
+                  data=z.read(entry)
+                  if not data.startswith(b'RIFF') or data[8:12]!=b'WEBP':
+                      raise SystemExit(f'Invalid WebP: {entry.filename}')
+                  (dest/name).write_bytes(data)
+                  print(entry.filename,'->',name,len(data),'bytes')
+          PY
+      - name: Commit published screenshots
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/screenshots/yanki-bahcesi/*.webp
+          if ! git diff --cached --quiet; then
+            git commit -m "assets: publish Yanki Bahcesi six gameplay screenshots"
+            git push
+          fi
