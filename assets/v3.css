@@ -257,3 +257,18 @@ body[class*="theme-"]:after{display:none}
 .gallery-placeholder{margin-top:16px;color:#b6c5db;font-size:.95rem}
 @media(prefers-reduced-motion:reduce){.gallery-feature img{transition:none}.gallery-feature a:hover img{transform:none}}
 @media(max-width:600px){.gallery-feature{border-radius:14px}.gallery-feature figcaption{padding:12px 14px}}
+
+/* Studio polish: consistent actions, responsive media and reduced motion */
+.document-links{display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center}
+.document-links a{display:inline-flex;align-items:center;min-height:40px;text-underline-offset:4px}
+.document-links a:hover{text-decoration:underline}
+.game-gallery .gallery-heading{max-width:780px}
+.yanki-shot-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:28px}
+.yanki-shot-grid figure{margin:0;min-width:0;overflow:hidden;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:12px}
+.yanki-shot-grid a{display:block;overflow:hidden;border-radius:12px}
+.yanki-shot-grid img{width:100%;height:auto;aspect-ratio:691/1536;object-fit:cover;transition:transform .25s ease}
+.yanki-shot-grid a:hover img{transform:scale(1.025)}
+.yanki-shot-grid figcaption{padding:10px 2px 2px;color:var(--muted);font-size:.9rem}
+@media(max-width:760px){.yanki-shot-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.yanki-shot-grid figure{padding:8px;border-radius:14px}.yanki-shot-grid figcaption{font-size:.8rem}.document-links{gap:8px 18px}}
+@media(max-width:420px){.wrap{width:calc(100% - 32px)}.yanki-shot-grid{gap:10px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.yanki-shot-grid img{transition:none}.yanki-shot-grid a:hover img{transform:none}}
