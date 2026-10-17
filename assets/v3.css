@@ -272,3 +272,15 @@ body[class*="theme-"]:after{display:none}
 @media(max-width:760px){.yanki-shot-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.yanki-shot-grid figure{padding:8px;border-radius:14px}.yanki-shot-grid figcaption{font-size:.8rem}.document-links{gap:8px 18px}}
 @media(max-width:420px){.wrap{width:calc(100% - 32px)}.yanki-shot-grid{gap:10px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.yanki-shot-grid img{transition:none}.yanki-shot-grid a:hover img{transform:none}}
+
+/* Site-wide studio refinements */
+.text-link{display:inline-flex;align-items:center;gap:8px;margin-top:12px;color:#d6c3ff;font-weight:700;text-underline-offset:5px}
+.text-link:hover{text-decoration:underline}
+.game,.feature-panel,.document-card{min-width:0}
+.game .cover img{transition:transform .35s ease}
+@media(hover:hover){.game:hover .cover img{transform:scale(1.035)}}
+.game-body p{max-width:48ch}
+.footer-nav a{min-height:36px;display:inline-flex;align-items:center}
+.nav a:focus-visible,.lang:focus-visible,.menu-btn:focus-visible{outline:2px solid #d8baff;outline-offset:3px}
+@media(max-width:600px){.hero{padding-block:56px 70px}.section{padding-block:64px}.section-head{margin-bottom:24px}.hero h1{letter-spacing:-.055em}.game-body p{line-height:1.65}.footer-nav{gap:8px 16px}}
+@media(prefers-reduced-motion:reduce){.btn,.game .cover img{transition:none}.btn:hover,.game:hover .cover img{transform:none}}
