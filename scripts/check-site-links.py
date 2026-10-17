@@ -14,8 +14,11 @@ class Links(HTMLParser):
         self.images = []
         self.ids = set()
         self.duplicate_ids = []
+        self.first_focusable = None
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
+        if self.first_focusable is None and ((tag == 'a' and a.get('href')) or tag in ('button', 'input', 'select', 'textarea')):
+            self.first_focusable = (tag, a)
         if a.get('id'):
             if a['id'] in self.ids:
                 self.duplicate_ids.append(a['id'])
@@ -39,6 +42,10 @@ for html in sorted(ROOT.rglob('*.html')):
     except Exception as e:
         errors.append(f'{html.relative_to(ROOT)}: HTML parsing failed: {e}')
         continue
+    if 'class="skip-link"' in html.read_text(encoding='utf-8'):
+        first = doc.first_focusable
+        if not first or first[0] != 'a' or first[1].get('href') != '#content':
+            errors.append(f'{html.relative_to(ROOT)}: skip link must be first focusable element')
     for duplicate in doc.duplicate_ids:
         errors.append(f'{html.relative_to(ROOT)}: duplicate HTML id #{duplicate}')
     for tag, value in doc.targets:
