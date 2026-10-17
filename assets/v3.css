@@ -318,3 +318,14 @@ body[class*="theme-"]:after{display:none}
 .theme-support .feature-panel h2{font-size:clamp(24px,7vw,36px)}
 .theme-support .document-grid{grid-template-columns:minmax(0,1fr)}
 }
+
+/* P1 compact support typography */
+.theme-support .support-email{font-size:clamp(18px,2.6vw,32px)!important;line-height:1.25;letter-spacing:-.035em;overflow-wrap:anywhere}
+.theme-support .support-email a{text-decoration:none}
+@media(max-width:760px){
+.theme-support .page-hero h1{font-size:clamp(34px,8vw,52px);line-height:1.1}
+.theme-support .page-hero p{font-size:clamp(15px,4vw,18px)}
+.theme-support .feature-panel h2:not(.support-email){font-size:clamp(23px,6vw,32px)}
+.theme-support .feature-panel{padding:clamp(20px,5vw,28px)}
+.theme-support .support-email{font-size:clamp(18px,5vw,25px)!important}
+}
