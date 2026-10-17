@@ -43,7 +43,7 @@ for html in sorted(ROOT.rglob('*.html')):
         errors.append(f'{html.relative_to(ROOT)}: duplicate HTML id #{duplicate}')
     for tag, value in doc.targets:
         url = urlsplit(value)
-        if url.scheme or url.netloc or value.startswith(('#', 'mailto:', 'tel:', 'javascript:', 'data:')):
+        if url.scheme or url.netloc or value.startswith(('mailto:', 'tel:', 'javascript:', 'data:')):
             continue
         if not url.path and not url.fragment:
             continue
