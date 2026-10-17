@@ -284,3 +284,9 @@ body[class*="theme-"]:after{display:none}
 .nav a:focus-visible,.lang:focus-visible,.menu-btn:focus-visible{outline:2px solid #d8baff;outline-offset:3px}
 @media(max-width:600px){.hero{padding-block:56px 70px}.section{padding-block:64px}.section-head{margin-bottom:24px}.hero h1{letter-spacing:-.055em}.game-body p{line-height:1.65}.footer-nav{gap:8px 16px}}
 @media(prefers-reduced-motion:reduce){.btn,.game .cover img{transition:none}.btn:hover,.game:hover .cover img{transform:none}}
+
+/* Accessibility navigation pass */
+.skip-link{position:fixed;left:16px;top:12px;z-index:9999;padding:12px 18px;border-radius:10px;background:#fff;color:#111521;font-weight:800;transform:translateY(-160%);transition:transform .15s ease}
+.skip-link:focus{transform:translateY(0)}
+#content{scroll-margin-top:96px}
+@media(prefers-reduced-motion:reduce){.skip-link{transition:none}}
