@@ -16,3 +16,8 @@ jobs:
           python-version: '3.12'
       - name: Check local HTML links and assets
         run: python scripts/check-site-links.py
+      - name: Validate XML sitemap
+        run: python scripts/check-sitemap.py
+      - name: Check JavaScript syntax
+        run: |
+          find assets -type f -name '*.js' -print0 | xargs -0 -r -n1 node --check
