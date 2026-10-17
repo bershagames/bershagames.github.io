@@ -290,3 +290,4 @@ body[class*="theme-"]:after{display:none}
 .skip-link:focus{transform:translateY(0)}
 #content{scroll-margin-top:96px}
 @media(prefers-reduced-motion:reduce){.skip-link{transition:none}}
+\n/* Bilingual legal document layout */\n.document-grid:has(> .document-card[hidden]){grid-template-columns:minmax(0,1fr)}\n.document-grid > .document-card:not([hidden]){min-width:0}\n
