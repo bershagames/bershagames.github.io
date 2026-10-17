@@ -329,3 +329,12 @@ body[class*="theme-"]:after{display:none}
 .theme-support .feature-panel{padding:clamp(20px,5vw,28px)}
 .theme-support .support-email{font-size:clamp(18px,5vw,25px)!important}
 }
+
+/* P1 progressive gameplay galleries */
+.game-gallery-grid{width:min(1280px,calc(100% - 48px));margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;align-items:start}
+.game-gallery-item{display:block;min-width:0;overflow:hidden;border:1px solid var(--line);border-radius:18px;background:var(--surface);transition:border-color .2s ease,transform .2s ease}
+.game-gallery-item[hidden]{display:none}
+.game-gallery-item img{width:100%;height:auto;max-height:460px;object-fit:contain}
+.game-gallery-item:hover{border-color:var(--violet);transform:translateY(-2px)}
+@media(max-width:600px){.game-gallery-grid{width:min(100% - 36px,1280px);grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.game-gallery-item{border-radius:12px}}
+@media(prefers-reduced-motion:reduce){.game-gallery-item{transition:none}.game-gallery-item:hover{transform:none}}
