@@ -12,8 +12,14 @@ class Links(HTMLParser):
         super().__init__()
         self.targets = []
         self.images = []
+        self.ids = set()
+        self.duplicate_ids = []
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
+        if a.get('id'):
+            if a['id'] in self.ids:
+                self.duplicate_ids.append(a['id'])
+            self.ids.add(a['id'])
         if tag == 'a' and a.get('href'):
             self.targets.append((tag, a['href']))
         if tag in ('img', 'script', 'link'):
@@ -33,13 +39,19 @@ for html in sorted(ROOT.rglob('*.html')):
     except Exception as e:
         errors.append(f'{html.relative_to(ROOT)}: HTML parsing failed: {e}')
         continue
+    for duplicate in doc.duplicate_ids:
+        errors.append(f'{html.relative_to(ROOT)}: duplicate HTML id #{duplicate}')
     for tag, value in doc.targets:
         url = urlsplit(value)
         if url.scheme or url.netloc or value.startswith(('#', 'mailto:', 'tel:', 'javascript:', 'data:')):
             continue
-        if not url.path:
+        if not url.path and not url.fragment:
             continue
         decoded = unquote(url.path)
+        if not decoded and url.fragment:
+            if unquote(url.fragment) not in doc.ids:
+                errors.append(f'{html.relative_to(ROOT)}: missing in-page anchor #{url.fragment}')
+            continue
         if decoded.startswith('/'):
             target = ROOT / decoded.lstrip('/')
         else:
