@@ -304,3 +304,17 @@ body[class*="theme-"]:after{display:none}
 .report-wide{grid-column:1/-1}
 .report-form button{max-width:100%}
 @media(max-width:680px){.report-form{grid-template-columns:minmax(0,1fr)}}
+
+/* P1 mobile support layout corrections */
+.theme-support .feature-panel{min-width:0}
+.theme-support .feature-panel h2{overflow-wrap:anywhere;word-break:normal;font-size:clamp(24px,4vw,46px)}
+.theme-support .split{align-items:stretch;grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:760px){
+.theme-support .page-hero{padding-top:56px;padding-bottom:20px}
+.theme-support .page-hero h1{font-size:clamp(40px,9vw,62px)}
+.theme-support .section{padding-block:38px}
+.theme-support .split{grid-template-columns:minmax(0,1fr);gap:18px}
+.theme-support .feature-panel{min-height:0;padding:clamp(22px,6vw,34px)}
+.theme-support .feature-panel h2{font-size:clamp(24px,7vw,36px)}
+.theme-support .document-grid{grid-template-columns:minmax(0,1fr)}
+}
