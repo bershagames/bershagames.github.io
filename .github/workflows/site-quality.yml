@@ -18,6 +18,8 @@ jobs:
         run: python scripts/check-site-links.py
       - name: Validate XML sitemap
         run: python scripts/check-sitemap.py
+      - name: Validate published screenshot galleries
+        run: python scripts/check-gallery.py
       - name: Check JavaScript syntax
         run: |
           find assets -type f -name '*.js' -print0 | xargs -0 -r -n1 node --check
