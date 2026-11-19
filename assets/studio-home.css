@@ -1,0 +1,31 @@
+/* BershaGames studio homepage refresh — scoped to home only */
+.theme-home{--studio-accent:#7aa8ff;--studio-purple:#aa87ff}
+.theme-home .hero{background:radial-gradient(ellipse 65% 65% at 85% 35%,#254b9733,transparent 70%);padding-block:clamp(72px,8vw,118px)}
+.theme-home .hero-layout{gap:clamp(24px,5vw,70px)}
+.theme-home .hero h1{max-width:780px;text-wrap:balance}
+.theme-home .hero p{max-width:58ch}
+.theme-home .hero .eyebrow{display:inline-flex;padding:8px 12px;border:1px solid #9c91ef55;border-radius:999px;background:#6d60ba18}
+.theme-home .btn.primary{background:linear-gradient(110deg,#3478ff,#8755e9);border-color:#91aaff;box-shadow:0 14px 35px #3970ff35}
+.theme-home .hero-art .art{transition:box-shadow .25s ease,filter .25s ease}
+.theme-home .hero-art .art:focus-visible{outline:3px solid #fff;outline-offset:5px}
+.theme-home .games-grid{gap:clamp(16px,2.5vw,28px)}
+.theme-home .game{background:linear-gradient(145deg,#1a2540,#111726);border-color:#ffffff24;box-shadow:0 18px 45px #00000030}
+.theme-home .game:focus-visible{outline:3px solid #a6baff;outline-offset:5px}
+.theme-home .game-meta{color:#b6a2ff}
+.theme-home .game-link{color:#b7ceff}
+.theme-home .feature-panel{background:linear-gradient(145deg,#1d2850,#151629)}
+.theme-home .section-head h2{text-wrap:balance}
+@media(min-width:761px){.theme-home .game-body{min-height:220px;display:flex;flex-direction:column}.theme-home .game-link{margin-top:auto}}
+@media(max-width:760px){
+.theme-home .hero{padding-block:48px 64px}
+.theme-home .hero-layout{gap:20px}
+.theme-home .hero h1{font-size:clamp(43px,10vw,70px);line-height:1.04;letter-spacing:-.06em}
+.theme-home .hero p{font-size:16px;line-height:1.7}
+.theme-home .hero-art{margin-top:4px}
+.theme-home .section{padding-block:60px}
+.theme-home .game{border-radius:19px}
+.theme-home .game-body{padding:21px}
+.theme-home .marquee .wrap{justify-content:center}
+}
+@media(max-width:390px){.theme-home .hero h1{font-size:clamp(40px,10.5vw,48px)}}
+@media(prefers-reduced-motion:reduce){.theme-home .hero-art .art{transition:none}}
