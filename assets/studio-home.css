@@ -67,3 +67,25 @@
 .theme-home .waffle-steps p{font-size:14px;line-height:1.7;color:#c3cfe2;margin:0}
 @media(max-width:900px){.theme-home .waffle-steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:520px){.theme-home .waffle-steps{grid-template-columns:1fr}.theme-home .waffle-step-number{margin-bottom:12px}}
+
+/* Real cover-only media area and accessible FAQ */
+.theme-home .waffle-media{background:radial-gradient(ellipse at 20% 20%,#354f9533,transparent 65%)}
+.theme-home .waffle-media-layout{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(250px,.75fr);gap:22px;align-items:stretch}
+.theme-home .waffle-media-cover{margin:0;min-width:0;overflow:hidden;border:1px solid #ffffff2b;border-radius:20px;background:#121a2b}
+.theme-home .waffle-media-cover img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.theme-home .waffle-media-cover figcaption{padding:15px 18px;color:#b9c9df;font-size:13px;line-height:1.5}
+.theme-home .waffle-media-note{padding:clamp(22px,3vw,34px);border:1px dashed #9b92e877;border-radius:20px;background:#1b2340a8;display:flex;flex-direction:column;align-items:flex-start}
+.theme-home .waffle-media-icon{font-size:38px;color:#b6a3ff}
+.theme-home .waffle-media-note h3{font-size:22px;margin:20px 0 10px}
+.theme-home .waffle-media-note p{color:#c4d0e5;line-height:1.7}
+.theme-home .waffle-media-note a{margin-top:auto;padding-top:20px;color:#c5b8ff;font-weight:700}
+.theme-home .waffle-faq{background:#0d1425}
+.theme-home .waffle-faq-list{display:grid;gap:12px;max-width:920px}
+.theme-home .waffle-faq-list details{border:1px solid #ffffff25;border-radius:16px;background:#1a2440;overflow:hidden}
+.theme-home .waffle-faq-list summary{cursor:pointer;list-style:none;padding:22px 24px;font-size:17px;font-weight:750;display:flex;justify-content:space-between;gap:20px}
+.theme-home .waffle-faq-list summary::-webkit-details-marker{display:none}
+.theme-home .waffle-faq-list summary::after{content:'+';font-size:24px;color:#bda5ff;line-height:1}
+.theme-home .waffle-faq-list details[open] summary::after{content:'−'}
+.theme-home .waffle-faq-list details p{padding:0 24px 22px;margin:0;color:#c4d0e5;line-height:1.7}
+.theme-home .waffle-faq-list summary:focus-visible{outline:3px solid #a6baff;outline-offset:-4px}
+@media(max-width:760px){.theme-home .waffle-media-layout{grid-template-columns:1fr}.theme-home .waffle-media-note{min-height:240px}.theme-home .waffle-faq-list summary{font-size:16px;padding:18px}.theme-home .waffle-faq-list details p{padding:0 18px 18px}}
