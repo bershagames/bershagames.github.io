@@ -57,3 +57,13 @@
 .theme-home .waffle-page-actions{margin-top:30px}
 .theme-home .waffle-detail a:focus-visible{outline:3px solid #a6baff;outline-offset:4px}
 @media(max-width:760px){.theme-home .waffle-section-intro{margin-bottom:20px}.theme-home .waffle-page-actions .btn{max-width:100%;text-align:center}}
+
+/* Four-step gameplay section, no fabricated screenshots or release information */
+.theme-home .waffle-loop{background:linear-gradient(160deg,#10172b,#0b1020)}
+.theme-home .waffle-steps{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.theme-home .waffle-steps li{min-width:0;padding:clamp(20px,2.6vw,30px);border:1px solid #ffffff24;border-radius:20px;background:linear-gradient(145deg,#1b2542,#111727)}
+.theme-home .waffle-step-number{display:inline-block;color:#bda5ff;font-size:28px;font-weight:800;letter-spacing:-.04em;margin-bottom:26px}
+.theme-home .waffle-steps h3{font-size:clamp(18px,2vw,24px);line-height:1.2;margin:0 0 12px}
+.theme-home .waffle-steps p{font-size:14px;line-height:1.7;color:#c3cfe2;margin:0}
+@media(max-width:900px){.theme-home .waffle-steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.theme-home .waffle-steps{grid-template-columns:1fr}.theme-home .waffle-step-number{margin-bottom:12px}}
