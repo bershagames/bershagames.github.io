@@ -1,0 +1,10 @@
+/* BershaGames game catalogue, scoped to the games listing only. */
+.studio-catalog .catalog-intro{position:relative;isolation:isolate;overflow:hidden;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;min-height:340px;margin-bottom:36px;padding:clamp(28px,5vw,64px);border:1px solid #7775d177;border-radius:26px;background:linear-gradient(90deg,#0b1022 2%,#0b1022f2 38%,#0b102299 70%,#0b102255),url('/assets/covers/waffle-corner.webp') center right/cover no-repeat;box-shadow:0 25px 70px #0006}
+.studio-catalog .catalog-intro::before{content:'';position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 20% 30%,#6b43bb35,transparent 70%)}
+.studio-catalog .catalog-intro h2{font-size:clamp(40px,5vw,72px);line-height:1.05;margin:12px 0}
+.studio-catalog .catalog-intro p{max-width:47ch;line-height:1.7;color:#e0e8fa}
+.studio-catalog .catalog-intro .btn{margin-top:16px}
+.studio-catalog .catalog-intro a:focus-visible{outline:3px solid #fff;outline-offset:5px}
+@media(min-width:1080px){.studio-catalog .games-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:760px){.studio-catalog .catalog-intro{min-height:420px;padding:26px;background:linear-gradient(0deg,#0b1022 3%,#0b1022ed 38%,#0b102277 100%),url('/assets/covers/waffle-corner.webp') center top/cover no-repeat}.studio-catalog .catalog-intro h2{font-size:44px}.studio-catalog .catalog-intro .btn{max-width:100%;text-align:center}}
+@media(prefers-reduced-motion:reduce){.studio-catalog .catalog-intro *{scroll-behavior:auto}}
