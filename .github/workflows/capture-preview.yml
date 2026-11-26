@@ -1,0 +1,27 @@
+name: Capture studio homepage preview
+on:
+  push:
+    branches: [preview/studio-showcase]
+permissions:
+  contents: write
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify links and render both layouts
+        run: |
+          python scripts/check-site-links.py
+          python -m http.server 8765 >/tmp/preview-server.log 2>&1 &
+          for i in {1..15}; do curl -fsS http://localhost:8765/ >/dev/null && break; sleep 1; done
+          mkdir -p preview
+          for config in desktop:1440,1140 mobile:390,1060; do
+            name=${config%:*}
+            size=${config#*:}
+            google-chrome --headless --no-sandbox --disable-dev-shm-usage --hide-scrollbars --window-size="$size" --virtual-time-budget=6000 --screenshot="preview/$name.png" http://localhost:8765/
+          done
+          git config user.name github-actions
+          git config user.email github-actions@users.noreply.github.com
+          git add preview/desktop.png preview/mobile.png
+          git commit -m "Render desktop and mobile previews"
+          git push
