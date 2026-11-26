@@ -1,4 +1,19 @@
 {
   "schemaVersion": 2,
-  "entries": []
+  "entries": [
+    {
+      "project": "bmr",
+      "type": "release",
+      "date": "2026-11-26",
+      "title": {
+        "tr": "Block Merge Rush Google Play’de",
+        "en": "Block Merge Rush is on Google Play"
+      },
+      "summary": {
+        "tr": "Android sürümünü oyun sayfasındaki Google Play bağlantısından indirebilirsin.",
+        "en": "Find the Android release through the Google Play link on the game page."
+      },
+      "url": "/games/block-merge-rush/"
+    }
+  ]
 }
