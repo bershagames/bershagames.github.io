@@ -20,6 +20,7 @@ jobs:
           curl -fsSL 'https://play-lh.googleusercontent.com/mBJHEbQm5fiC2654GyaP2ZzKusssceq4gVzJqPVZUEY4XvrK7_g7y861r12diPTNzzNRbtkOILuG8gzbU7gh=w460-h920' -o /tmp/boards/16.png
           curl -fsSL 'https://play-lh.googleusercontent.com/-ePANDv8jS2NwvKRNNb7ImNv6-_64l8xS6Q2gEDJQu80I02Buu51wiy4luYqsElCoF_6-JdfdNzcX7ha2hUKPg=w460-h920' -o /tmp/boards/17.png
           curl -fsSL 'https://play-lh.googleusercontent.com/PBKeu4OENY8HJtvedc77bQcRjUUjCsyfmfon9vXqHg82VtpMuwYxvmZvH0fiJb-Q0wzjwuEbB3LCZhOg-aAkAQ=w460-h920' -o /tmp/boards/18.png
+          python -m pip install Pillow
           python - <<'PY'
           from PIL import Image, ImageDraw
           out=Image.new('RGB',(800,260))
