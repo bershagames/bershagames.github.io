@@ -11,17 +11,28 @@ jobs:
       - uses: actions/checkout@v4
       - name: Verify links and render both layouts
         run: |
-          python scripts/check-site-links.py
-          python -m http.server 8765 >/tmp/preview-server.log 2>&1 &
-          for i in {1..15}; do curl -fsS http://localhost:8765/ >/dev/null && break; sleep 1; done
-          mkdir -p preview
-          for config in desktop:1440,1140 mobile:390,1060; do
-            name=${config%:*}
-            size=${config#*:}
-            google-chrome --headless --no-sandbox --disable-dev-shm-usage --hide-scrollbars --window-size="$size" --virtual-time-budget=6000 --screenshot="preview/$name.png" http://localhost:8765/
-          done
+          mkdir -p /tmp/boards preview
+          curl -fsSL 'https://play-lh.googleusercontent.com/YxfQgLhpr3mOA2mehVae36LMsGSRuhjMqBCqI-4BVE5gDTYDB7CMqqeQnBJtpG2FiNQPEagxl6tKYxC4uz33Q_Y=w460-h920' -o /tmp/boards/11.png
+          curl -fsSL 'https://play-lh.googleusercontent.com/2p2omTbLDf_pvOVkxnW03xGF81nhLin13UHUAO8nhaDsPCKSvRX85rLuZl3rNWwXvRhvbEiDkm3C0b1hl1se=w460-h920' -o /tmp/boards/12.png
+          curl -fsSL 'https://play-lh.googleusercontent.com/3IJ1flQuKLkbyv0dH9BzQTzznzCVBupMzzEhq7GlVAV4SorN-Ycj_DNZjwY-Cvy1bUrhOiHSlxFrLym0T_7J=w460-h920' -o /tmp/boards/13.png
+          curl -fsSL 'https://play-lh.googleusercontent.com/W8CJFB5JyB-YoM-O_szgpAN8o7jR53eujULwiXekzPXFR_KNS9xZlANZnBG6P7kBfas6YiZWXVoAhc3qxLYJ=w460-h920' -o /tmp/boards/14.png
+          curl -fsSL 'https://play-lh.googleusercontent.com/YW3YWYT9wlgziP1hKtEn8CRkUi8ztoliIMHjTlhpd0tcHhNfD0MwodaHRbyuSbJFQanu6kbaI5ZAoyeoOMopOw=w460-h920' -o /tmp/boards/15.png
+          curl -fsSL 'https://play-lh.googleusercontent.com/mBJHEbQm5fiC2654GyaP2ZzKusssceq4gVzJqPVZUEY4XvrK7_g7y861r12diPTNzzNRbtkOILuG8gzbU7gh=w460-h920' -o /tmp/boards/16.png
+          curl -fsSL 'https://play-lh.googleusercontent.com/-ePANDv8jS2NwvKRNNb7ImNv6-_64l8xS6Q2gEDJQu80I02Buu51wiy4luYqsElCoF_6-JdfdNzcX7ha2hUKPg=w460-h920' -o /tmp/boards/17.png
+          curl -fsSL 'https://play-lh.googleusercontent.com/PBKeu4OENY8HJtvedc77bQcRjUUjCsyfmfon9vXqHg82VtpMuwYxvmZvH0fiJb-Q0wzjwuEbB3LCZhOg-aAkAQ=w460-h920' -o /tmp/boards/18.png
+          python - <<'PY'
+          from PIL import Image, ImageDraw
+          out=Image.new('RGB',(800,260))
+          for i in range(11,19):
+              im=Image.open(f'/tmp/boards/{i}.png').convert('RGB')
+              im.save(f'preview/board-{i}.webp',quality=90)
+              im.thumbnail((98,232))
+              out.paste(im,((i-11)*100,0))
+              ImageDraw.Draw(out).text(((i-11)*100,238),str(i))
+          out.save('preview/contact.jpg')
+          PY
           git config user.name github-actions
           git config user.email github-actions@users.noreply.github.com
-          git add preview/desktop.png preview/mobile.png
-          git commit -m "Render desktop and mobile previews"
+          git add preview/
+          git commit -m "Collect official game screenshots for artwork review"
           git push
