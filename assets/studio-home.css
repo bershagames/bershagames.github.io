@@ -27,9 +27,9 @@
 .blue { background:#228cfa; left:0; bottom:3%; transform:rotate(-14deg); }
 .green { background:#69bd2b; right:4%; top:31%; transform:rotate(-13deg); }
 .violet { background:#953dea; right:1%; bottom:8%; transform:rotate(11deg); }
-.transit-feature,.development-grid a { display:block; position:relative; isolation:isolate; overflow:hidden; border:1px solid #ffffff33; border-radius:16px; background:#15283a; }
+.transit-feature,.development-grid article { display:block; position:relative; isolation:isolate; overflow:hidden; border:1px solid #ffffff33; border-radius:16px; background:#15283a; }
 .transit-feature img,.development-grid img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:-2; }
-.transit-feature::before,.development-grid a::before { content:""; position:absolute; inset:0; z-index:-1; }
+.transit-feature::before,.development-grid article::before { content:""; position:absolute; inset:0; z-index:-1; }
 .transit-feature::before { background:linear-gradient(90deg,#061124ed,#061124aa 27%,transparent 70%); }
 .transit-feature { display:flex; align-items:center; min-height:clamp(175px,18vw,240px); margin-top:8px; }
 .transit-feature img { object-position:center 58%; }
@@ -38,10 +38,10 @@
 .development { padding:1.15rem 0 2rem; }
 .development>h2 { margin:0 0 .65em; font-size:clamp(1.4rem,2.5vw,2rem); line-height:1.15; }
 .development-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; }
-.development-grid a { aspect-ratio:16/9; display:flex; align-items:end; padding:1rem; }
-.development-grid a::before { background:linear-gradient(transparent 40%,#050916e8); }
+.development-grid article { aspect-ratio:16/9; display:flex; align-items:end; padding:1rem; }
+.development-grid article::before { background:linear-gradient(transparent 40%,#050916e8); }
 .development-grid h3 { margin:0; font-size:clamp(1.25rem,2vw,1.75rem); }
-.development-grid a:hover,.transit-feature:hover { border-color:var(--cyan); }
+
 @media(max-width:700px) {
   .theme-home .header-inner { height:60px; gap:8px; }
   .theme-home .brand { font-size:18px; gap:6px; }
@@ -61,6 +61,8 @@
   .transit-copy { padding:1rem; align-self:start; }
   .transit-feature h2 { font-size:1.8rem; }
   .development-grid { grid-template-columns:1fr; gap:.6rem; }
-  .development-grid a { aspect-ratio:4/1; padding:.55rem .85rem; border-radius:12px; }
+  .development-grid article { aspect-ratio:4/1; padding:.55rem .85rem; border-radius:12px; }
   .development { padding:.9rem 0 1.6rem; }
 }
+
+.showcase [id] { scroll-margin-top: 5rem; }
