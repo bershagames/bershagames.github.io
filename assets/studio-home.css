@@ -1,59 +1,66 @@
-/* BershaGames studio homepage refresh — scoped to home only */
-.theme-home{--studio-accent:#7aa8ff;--studio-purple:#aa87ff}
-.theme-home .hero{background:radial-gradient(ellipse 65% 65% at 85% 35%,#254b9733,transparent 70%);padding-block:clamp(72px,8vw,118px)}
-.theme-home .hero-layout{gap:clamp(24px,5vw,70px)}
-.theme-home .hero h1{max-width:780px;text-wrap:balance}
-.theme-home .hero p{max-width:58ch}
-.theme-home .hero .eyebrow{display:inline-flex;padding:8px 12px;border:1px solid #9c91ef55;border-radius:999px;background:#6d60ba18}
-.theme-home .btn.primary{background:linear-gradient(110deg,#3478ff,#8755e9);border-color:#91aaff;box-shadow:0 14px 35px #3970ff35}
-.theme-home .hero-art .art{transition:box-shadow .25s ease,filter .25s ease}
-.theme-home .hero-art .art:focus-visible{outline:3px solid #fff;outline-offset:5px}
-.theme-home .games-grid{gap:clamp(16px,2.5vw,28px)}
-.theme-home .game{background:linear-gradient(145deg,#1a2540,#111726);border-color:#ffffff24;box-shadow:0 18px 45px #00000030}
-.theme-home .game:focus-visible{outline:3px solid #a6baff;outline-offset:5px}
-.theme-home .game-meta{color:#b6a2ff}
-.theme-home .game-link{color:#b7ceff}
-.theme-home .feature-panel{background:linear-gradient(145deg,#1d2850,#151629)}
-.theme-home .section-head h2{text-wrap:balance}
-@media(min-width:761px){.theme-home .game-body{min-height:220px;display:flex;flex-direction:column}.theme-home .game-link{margin-top:auto}}
-@media(max-width:760px){
-.theme-home .hero{padding-block:48px 64px}
-.theme-home .hero-layout{gap:20px}
-.theme-home .hero h1{font-size:clamp(43px,10vw,70px);line-height:1.04;letter-spacing:-.06em}
-.theme-home .hero p{font-size:16px;line-height:1.7}
-.theme-home .hero-art{margin-top:4px}
-.theme-home .section{padding-block:60px}
-.theme-home .game{border-radius:19px}
-.theme-home .game-body{padding:21px}
-.theme-home .marquee .wrap{justify-content:center}
+.theme-home { background:#090b18; color:#fafbff; }
+.theme-home .header { background:#090b18f5; }
+.theme-home .brand span span { color:inherit; font-weight:inherit; }
+.theme-home .header-inner { height:72px; }
+.theme-home .nav { gap:clamp(.3rem,2vw,2rem); }
+.theme-home .nav a { color:#f4f6ff; font-size:1rem; }
+.theme-home .lang { border-radius:2rem; }
+.showcase { --cyan:#00e5ef; }
+.rush { overflow:hidden; background:radial-gradient(ellipse at 75% 70%,#233b8e 0%,#172557 24%,transparent 60%),linear-gradient(110deg,#080b17 24%,#10132c 65%,#052943); }
+.rush-inner,.showcase-wrap { width:min(1280px,94%); margin-inline:auto; }
+.rush-inner { display:grid; grid-template-columns:44% 56%; min-height:clamp(360px,36vw,480px); align-items:stretch; }
+.rush-copy,.transit-copy { position:relative; z-index:2; align-self:center; padding:2rem clamp(0px,2vw,32px); }
+.release-label,.development>h2 { border-inline-start:4px solid var(--cyan); padding-inline-start:.65em; }
+.release-label { margin:0; font-weight:700; line-height:1.15; }
+.rush h1,.transit-feature h2,.development h2,.development h3 { font-family:'DM Sans',system-ui,sans-serif; letter-spacing:-.045em; }
+.rush h1 { font-size:clamp(3rem,6.4vw,6.5rem); line-height:.94; margin:.18em 0; }
+.rush-tagline { font-size:clamp(1rem,2vw,1.6rem); margin:0 0 1.25em; }
+.play-download { display:inline-flex; align-items:center; gap:.65em; padding:.8em 1.35em; border-radius:.6em; background:var(--cyan); color:#041216; font-weight:800; font-size:clamp(1rem,1.5vw,1.3rem); }
+.play-download:hover { background:#79faff; }
+.rush-art { position:relative; isolation:isolate; }
+.rush-art::before { content:""; position:absolute; inset:5% -14% -20% -14%; transform:skewX(-12deg); background:linear-gradient(111deg,transparent 25%,#5978ff33 28%,transparent 33%,transparent 63%,#00abff44 66%,transparent 72%); filter:blur(9px); }
+.handset { position:absolute; width:clamp(185px,22vw,310px); top:4%; left:27%; transform:rotate(9deg); border:5px solid #20243d; border-radius:1.75rem; overflow:hidden; background:#13152b url('/assets/covers/block-merge-rush.webp') center/cover; box-shadow:0 0 0 2px #9eaed5,8px 4px 0 #06091c,0 10px 55px #487cff88; }
+.handset img { width:100%; height:auto; }
+.tile { position:absolute; display:grid; place-items:center; width:clamp(2.8rem,5.5vw,5.5rem); aspect-ratio:1; border-radius:20%; font:bold clamp(1.5rem,3.5vw,3rem)/1 system-ui; border:2px solid #ffffff85; box-shadow:inset 0 3px 5px #ffffff66,inset 0 -5px 3px #0003,0 9px 18px #0006; text-shadow:0 2px 3px #0005; }
+.pink { background:#cc28ca; left:4%; top:14%; transform:rotate(16deg); }
+.amber { background:#f5a82e; left:12%; top:54%; transform:rotate(12deg); }
+.blue { background:#228cfa; left:0; bottom:3%; transform:rotate(-14deg); }
+.green { background:#69bd2b; right:4%; top:31%; transform:rotate(-13deg); }
+.violet { background:#953dea; right:1%; bottom:8%; transform:rotate(11deg); }
+.transit-feature,.development-grid a { display:block; position:relative; isolation:isolate; overflow:hidden; border:1px solid #ffffff33; border-radius:16px; background:#15283a; }
+.transit-feature img,.development-grid img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:-2; }
+.transit-feature::before,.development-grid a::before { content:""; position:absolute; inset:0; z-index:-1; }
+.transit-feature::before { background:linear-gradient(90deg,#061124ed,#061124aa 27%,transparent 70%); }
+.transit-feature { display:flex; align-items:center; min-height:clamp(175px,18vw,240px); margin-top:8px; }
+.transit-feature img { object-position:center 58%; }
+.transit-copy { padding-inline:clamp(1.2rem,3vw,3rem); }
+.transit-feature h2 { margin:.22em 0 0; font-size:clamp(2rem,4vw,3.75rem); line-height:.95; }
+.development { padding:1.15rem 0 2rem; }
+.development>h2 { margin:0 0 .65em; font-size:clamp(1.4rem,2.5vw,2rem); line-height:1.15; }
+.development-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; }
+.development-grid a { aspect-ratio:16/9; display:flex; align-items:end; padding:1rem; }
+.development-grid a::before { background:linear-gradient(transparent 40%,#050916e8); }
+.development-grid h3 { margin:0; font-size:clamp(1.25rem,2vw,1.75rem); }
+.development-grid a:hover,.transit-feature:hover { border-color:var(--cyan); }
+@media(max-width:700px) {
+  .theme-home .header-inner { height:60px; gap:8px; }
+  .theme-home .brand { font-size:18px; gap:6px; }
+  .theme-home .brand img { width:34px; height:34px; }
+  .theme-home .header-tools { margin-left:auto; }
+  .rush-inner { display:flex; flex-direction:column; min-height:0; }
+  .rush-copy { width:100%; padding:1.3rem .55rem .45rem; }
+  .rush h1 { font-size:clamp(2.65rem,10.8vw,4rem); }
+  .rush-tagline { margin:0 0 .65rem; }
+  .release-label { font-size:.85rem; }
+  .play-download { padding:.64em 1.2em; }
+  .rush-art { height:clamp(195px,59vw,320px); }
+  .handset { width:39%; top:6%; left:32%; border-radius:1.25rem; }
+  .tile { width:13%; font-size:clamp(1.45rem,7vw,2.5rem); }
+  .pink { left:10%; }.amber { left:18%; }.blue { left:4%; }.green { right:5%; }.violet { right:2%; }
+  .transit-feature { min-height:155px; border-radius:12px; }
+  .transit-copy { padding:1rem; align-self:start; }
+  .transit-feature h2 { font-size:1.8rem; }
+  .development-grid { grid-template-columns:1fr; gap:.6rem; }
+  .development-grid a { aspect-ratio:4/1; padding:.55rem .85rem; border-radius:12px; }
+  .development { padding:.9rem 0 1.6rem; }
 }
-@media(max-width:390px){.theme-home .hero h1{font-size:clamp(40px,10.5vw,48px)}}
-@media(prefers-reduced-motion:reduce){.theme-home .hero-art .art{transition:none}}
-
-/* Approved studio direction: featured game and three-column catalogue */
-.theme-home .studio-featured{padding-block:clamp(54px,7vw,104px);background:radial-gradient(ellipse 55% 80% at 72% 40%,#583aa94a,transparent 78%),linear-gradient(135deg,#0c1230,#0a0d1b 68%)}
-.theme-home .studio-featured .hero-layout{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(25px,4vw,70px)}
-.theme-home .studio-featured h1{font-size:clamp(54px,6.8vw,98px);line-height:1.02}
-.theme-home .studio-hero-copy{position:relative;z-index:2}
-.theme-home .studio-hero-facts{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-.theme-home .studio-hero-facts span{padding:6px 11px;border:1px solid #ffffff26;border-radius:999px;background:#ffffff0a;color:#c9d5ee;font-size:12px;font-weight:700}
-.theme-home .studio-hero-cover{display:block;position:relative;min-width:0;overflow:hidden;border:1px solid #a7a3f65e;border-radius:28px;box-shadow:0 30px 85px #0009}
-.theme-home .studio-hero-cover img{width:100%;height:100%;min-height:370px;object-fit:cover}
-.theme-home .studio-cover-label{position:absolute;bottom:0;left:0;right:0;padding:42px 24px 20px;background:linear-gradient(transparent,#070b18ee);display:flex;justify-content:space-between;font:800 16px 'Space Grotesk',sans-serif;letter-spacing:.06em}
-.theme-home .studio-all-games{display:inline-flex;margin:0 0 22px auto;padding:10px 16px;border:1px solid #877ef9a8;border-radius:999px;color:#d9dcff;font-size:13px;font-weight:800}
-.theme-home .studio-all-games:hover{background:#8379fa22}
-@media(min-width:1080px){.theme-home .games-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.theme-home .game-body{min-height:250px}}
-@media(max-width:760px){.theme-home .studio-featured .hero-layout{grid-template-columns:1fr}.theme-home .studio-featured h1{font-size:clamp(48px,11vw,70px)}.theme-home .studio-hero-cover img{min-height:0;aspect-ratio:16/10}.theme-home .studio-hero-facts{margin-top:22px}.theme-home .studio-cover-label{font-size:13px}.theme-home .studio-all-games{margin-bottom:18px}}
-
-/* Waffle Corner detail page — reuses existing cover and original studio logo */
-.theme-home .waffle-detail .game-spotlight{position:relative}
-.theme-home .waffle-detail .spotlight-art{overflow:hidden;border-radius:24px;border:1px solid #a7a3f64d;box-shadow:0 24px 70px #0007}
-.theme-home .waffle-detail .spotlight-art img{display:block;width:100%;height:auto}
-.theme-home .waffle-features{background:radial-gradient(ellipse 55% 60% at 80% 10%,#694ac51c,transparent 75%)}
-.theme-home .waffle-section-intro{max-width:680px;margin-bottom:30px}
-.theme-home .waffle-section-intro h2{font-size:clamp(30px,4vw,52px);line-height:1.1;margin:14px 0}
-.theme-home .waffle-section-intro p{color:#c2cee2;line-height:1.7}
-.theme-home .waffle-detail .document-card{border:1px solid #ffffff24;border-radius:20px;background:linear-gradient(145deg,#1b2542,#111727);padding:clamp(22px,3vw,34px)}
-.theme-home .waffle-page-actions{margin-top:30px}
-.theme-home .waffle-detail a:focus-visible{outline:3px solid #a6baff;outline-offset:4px}
-@media(max-width:760px){.theme-home .waffle-section-intro{margin-bottom:20px}.theme-home .waffle-page-actions .btn{max-width:100%;text-align:center}}
